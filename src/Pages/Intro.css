@@ -1,0 +1,44 @@
+.Intro-page {
+    min-height: 100vh;
+    color: white;
+}
+
+/* Photo */
+
+.image-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 25vh;
+}
+
+
+.image-wrapper {
+    display: inline-block;
+    overflow: hidden;
+    text-align: center;
+}
+
+.Image {
+    width: 33vh;
+    transition: 0.5s ease-in-out;
+}
+
+.Image:hover {
+   transform: scale(1.1);
+}
+
+/* details under photo */
+.details {
+ margin-top: 1rem;
+}
+
+.span2 {
+   margin-left: 4rem;
+}
+
+
+
+
+

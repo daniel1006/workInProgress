@@ -1,0 +1,36 @@
+.Home-page {
+    min-height: 100vh;
+    color: white;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* name  */
+.name {
+    position: fixed;
+    text-align: center;
+    padding-top: 17%;
+    font-size: 9rem;
+    z-index: 99;
+    width: 100%;
+}
+
+.home-style {
+    overflow: hidden;
+    position: relative;
+}
+
+.home-image {
+  width: 100%;
+}
+
+@media (max-width:1440) {
+    .name {
+        font-size: 2rem !important;
+        padding-top: 30%;
+    }
+    .home-style {
+        
+    }
+}

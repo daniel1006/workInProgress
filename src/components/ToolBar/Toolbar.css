@@ -1,0 +1,70 @@
+.Toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 56px;
+}
+
+.Toolbar-Nav {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+/* space between hamburger and logo */
+.Toolbar-logo {
+    margin-left: 1rem;
+}
+
+.Toolbar-logo a {
+    color: pink;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+/* Space between logo and ul */
+.Spacer {
+    flex: 1;
+}
+
+/* unordered list */
+.Toolbar-nav-list ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+}
+
+.Toolbar-nav-list li {
+    padding: 0 0.5rem;
+}
+
+/* LINKS */
+.Toolbar-nav-list a {
+    color: pink;
+    text-decoration: none;
+}
+
+.Toolbar-nav-list a:hover,
+.Toolbar-nav-list a:active {
+    color: orange;
+}
+
+/* hides nav top menu as broswer size shrinks */
+@media (max-width:768px) {
+    .Toolbar-nav-list {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .toolbar-toggle-button {
+        display: none;
+    }
+
+    .Toolbar-logo {
+       margin-left: 0;
+    }
+}
