@@ -1,36 +1,63 @@
 .Home-page {
-    min-height: 100vh;
-    color: white;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
+    min-height: 200vh;
+    color: black;
 }
 
 /* name  */
 .name {
-    position: fixed;
+    position: absolute;
     text-align: center;
-    padding-top: 17%;
+    padding-top: 12%;
     font-size: 9rem;
     z-index: 99;
     width: 100%;
+    overflow: hidden;
 }
 
-.home-style {
-    overflow: hidden;
-    position: relative;
+.first {
+    margin-right: 1rem;
 }
+
+@media (max-width:560px) {
+    .name {
+        padding-top: 30%;
+        font-size: 5rem;
+    }
+}
+
+@media (max-width:327px) {
+    .name {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width:257px) {
+    .name {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width:188px) {
+    .name {
+        font-size: 2rem;
+    }
+}
+
+/* Image */
+.home-style {
+   
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+
 
 .home-image {
   width: 100%;
+  position: absolute;
 }
 
-@media (max-width:1440) {
-    .name {
-        font-size: 2rem !important;
-        padding-top: 30%;
-    }
-    .home-style {
-        
-    }
-}
+
+/* second animation is forcing picture out of screen vh size. if vh extends you can see teh image */ 
+

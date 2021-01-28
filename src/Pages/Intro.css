@@ -1,6 +1,6 @@
 .Intro-page {
     min-height: 100vh;
-    color: white;
+    color: black;
 }
 
 /* Photo */
@@ -10,18 +10,19 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 25vh;
+    margin-top: 10vh;
 }
 
 
 .image-wrapper {
     display: inline-block;
-    overflow: hidden;
     text-align: center;
+    overflow: hidden;
+    width: 100%;
 }
 
 .Image {
-    width: 33vh;
+    width: 35vw;
     transition: 0.5s ease-in-out;
 }
 
@@ -32,10 +33,32 @@
 /* details under photo */
 .details {
  margin-top: 1rem;
+ font-size: 1.5rem;
 }
 
 .span2 {
    margin-left: 4rem;
+}
+
+@media (max-height:1000px) {
+    .details {
+      font-size:1.5rem ;
+    }
+    .span2 {
+        margin-left: 1rem;
+    }
+}
+
+@media (max-height:900px) {
+    .details {
+        font-size: 1rem;
+    }
+}
+
+@media (max-height:900px) {
+    .details {
+        font-size: 0.8rem;
+    }
 }
 
 

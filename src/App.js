@@ -44,7 +44,7 @@ class App extends Component {
   return(
     <main>
 
-<    div className="background" style={{ backgroundImage: `url('${background}')` }} >
+<    div  >
   
     <Router>
     
