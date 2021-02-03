@@ -30,7 +30,7 @@ const Intro = () => {
               </div>
 
               <div className="remark-box" >
-                   <motion.span initial={{ x: 300, opacity: 0 }} animate={{ x: 0, opacity: 1 }} exit={{ x: 300, opacity: 0 }} transition={{duration: 1}} className="remark"> I didn't draw this picture of me, but I can 
+                   <motion.span initial={{ x: 300, opacity: 0 }} animate={{ x: 0, opacity: 1 }} exit={{ x: -300, opacity: 0 }} transition={{duration: 1}} className="remark"> I didn't draw this picture of me, but I can 
                         <motion.span className="code"> code </motion.span> 
                     a little</motion.span>
                    

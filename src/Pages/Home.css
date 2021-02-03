@@ -1,6 +1,9 @@
 .Home-page {
-    min-height: 200vh;
-    color: black;
+    color: rgb(76, 73, 73);
+}
+
+.picture-vh {
+    min-height: 85vh;
 }
 
 /* name  */
@@ -26,7 +29,7 @@
 }
 
 /* Image */
-.home-style {
+.home-style { 
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -37,29 +40,52 @@
   position: absolute;
   overflow: hidden;
 }
+/* down facing arrow */
+.arrow-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 80%;
+  margin-top: 15%;
+}
 
+.down-arrow {
+    font-size: 4vw;
+    color: transparent;
+    margin-top: 4%;
+    margin-left: 17%;
+    stroke: rgb(76, 73, 73);
+    stroke-width: 25px;   
+}
+
+.word-above-arrow {
+ color: orange;
+ font-size: 1.5vw;
+}
+
+/* second part of page */
 /* welcome section */
 .welcome {
-    margin-top: 65%;
-    font-size: 2rem;
+    margin-top: 45%;
     height: 50vh;
     width: 100%;
-    background: lightblue;
-    position: absolute;
+    background: rgb(76, 73, 73);
+    font-size: 2.5vw;
 }
 
 .greetings {
-    text-align: center;
-    color: #4c5a21;
-    top: 30%;
+    color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10%;
 }
 
 
 /* portfolio section */
 .portfolio {
-    margin-top: 99%;
     height: 75vh;
-    background: orchid;
+    background: silver;
 }
 
 .portfolio-words {
