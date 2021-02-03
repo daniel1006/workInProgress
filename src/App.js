@@ -11,7 +11,8 @@ import Home from './Pages/Home';
 import Intro from './Pages/Intro';
 
 import './App.css';
-import background from './Images/background.png'
+
+
 
 
 class App extends Component {
@@ -44,7 +45,7 @@ class App extends Component {
   return(
     <main>
 
-<    div  >
+<    div className="background" >
   
     <Router>
     

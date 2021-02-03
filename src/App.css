@@ -1,6 +1,4 @@
-.background {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    overflow: hidden;
+  .background {
+    background-color: darkgray;
+    background-blend-mode: lighten;
 }
