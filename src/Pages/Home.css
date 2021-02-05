@@ -35,6 +35,14 @@
     overflow: hidden;
 }
 
+@media (max-width: 670px) {
+    .home-style {
+        height: 50vh;
+        position: absolute;
+        top: -50%;
+    }
+}
+
 .home-image {
   width: 100%;
   position: absolute;
@@ -42,49 +50,37 @@
 }
 /* down facing arrow */
 .arrow-container {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  left: 80%;
-  margin-top: 15%;
+ position: absolute;
+ display: flex;
+ flex-direction: column;
+ left: 80%;
+}
+
+@media (min-width: 850px) {
+    .word-above-arrow {
+        font-size: 10rem;
+    }
 }
 
 .down-arrow {
-    font-size: 4vw;
+    font-size: 3.5rem;
     color: transparent;
-    margin-top: 4%;
-    margin-left: 17%;
     stroke: rgb(76, 73, 73);
     stroke-width: 25px;   
+    margin-left: 20%;
+    margin-top: 5%;
 }
 
 .word-above-arrow {
  color: orange;
- font-size: 1.5vw;
+ font-size: 1.5rem;
 }
 
 /* second part of page */
-/* welcome section */
-.welcome {
-    margin-top: 45%;
-    height: 50vh;
-    width: 100%;
-    background: rgb(76, 73, 73);
-    font-size: 2.5vw;
-}
-
-.greetings {
-    color: orange;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 10%;
-}
-
-
 /* portfolio section */
 .portfolio {
     height: 75vh;
+    margin-top: 45%;
     background: silver;
 }
 

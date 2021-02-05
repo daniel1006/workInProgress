@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import {Route, BrowserRouter as Router, Switch} from 'react-router-dom';
+import {withRouter} from 'react-router'
 import { AnimatePresence } from 'framer-motion';
 
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import Toolbar from './components/ToolBar/Toolbar';
 import Backdrop from './components/Backdrop/Backdrop';
+import Footer from './components/Footer/Footer';
 import Contact from './Pages/Contact';
 import About from './Pages/About';
 import Home from './Pages/Home';
@@ -18,7 +20,7 @@ import './App.css';
 class App extends Component {
   state = {
       sideDrawerOpen: false
-    }
+    }  
    
     // Hamburger menu button handler
    drawerToggleClickHandler = () => {
@@ -40,7 +42,7 @@ class App extends Component {
      if (this.state.sideDrawerOpen) {
        backdrop =    <Backdrop click={this.backdropClickHandler} />
      }
-   
+  
      // allowing handler to be clicked/fired
   return(
     <main>
@@ -60,9 +62,9 @@ class App extends Component {
         <Switch location={location} key={location.pathname} >
         
          <Route path="/" exact component={Intro}> <Intro /> </Route>   
-         <Route path="/home" component={Home}> <Home /> </Route>
-         <Route path="/about" component={About}> <About /> </Route>
-         <Route path="/contact" component={Contact} > <Contact /> </Route>
+         <Route path="/home" component={Home}> <Home /> <Footer /> </Route>
+         <Route path="/about" component={About}> <About /> <Footer /> </Route>
+         <Route path="/contact" component={Contact} > <Contact /> <Footer /> </Route>
          
        </Switch>
        </AnimatePresence>

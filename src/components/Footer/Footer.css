@@ -1,0 +1,98 @@
+.footer {
+min-height: 50vh;
+background-color: plum;
+display: grid;
+grid-template-columns: 50%;
+grid-template-rows: 15% 15% 15% 15%;
+grid-row-gap: 3%;
+justify-content: center;
+align-content: center;
+}
+
+.footer-work {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+@media (max-width: 470px) {
+    .footer-work{
+        font-size: 1.25rem;
+        margin-top: 16%;
+    }
+}
+
+.footer-colab {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 470px) {
+    .footer-colab{
+        font-size: 1rem;
+        margin-top: 8%;
+    }
+}
+
+@media (max-width: 390px) {
+    .footer-colab{
+        font-size: 1rem;
+        margin-top: 0;
+    }
+}
+
+/* contact button */
+.footer-button {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    left: 40%;
+    width: 11vw;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.25rem;
+}
+
+.footer-button:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 60;
+    content: "";
+    display: block;
+    height: 4px;
+    left: 50%;
+    position: absolute;
+    background: orange;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  .footer-button:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+  @media screen and (max-height: 300px) {
+      ul {
+          margin-top: 40px;
+      }
+  }
+
+@media (max-width: 470px) {
+    .footer-button{
+        margin-top: 12%;
+    }
+}
+
+.envelope {
+    position: relative;
+    top: 6%;
+}
+
+/* links */
+.footer-links {
+    font-size: 1.35rem;
+    text-align: center;
+}
+
+.github{
+     margin-left: 2.5%;
+     margin-right: 2.5%;
+}

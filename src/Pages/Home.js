@@ -96,12 +96,8 @@ const Home = () => {
             </motion.div>
 
             <motion.div className="part2" >
-              <div className="welcome">
-                   <span className="greetings" >Welcome, I'm a junior web developer and this is my little website. </span> 
-              </div>
-
               <div className="portfolio" >
-                   <span className="portfolio-words" >portfolio</span>
+                   <span className="portfolio-words" >Welcome to my personal portfolio</span>
               </div>
              </motion.div>
              </div>  

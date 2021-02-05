@@ -7,20 +7,19 @@ import './Intro.css';
 
 
 const Intro = () => {
-    const exit = {
-        exit: {
-        opacity: 0,
-        }
-    };
 
     return(
         <div className="Intro-page">
-            <motion.h1 {...exit} className="exit" > </motion.h1>
+            <motion.h1 > </motion.h1>
             <section>
                 
-              <div className="image-box" >   
+              <div className="image-box">   
               <span className="image-wrapper" >
-             <Link to="/home" className="Image" > <img  className="Image" alt="ME Phote" src={Me} /> </Link> 
+             <Link to="/home" className="Image" > 
+                     <motion.img initial={{ x: 0, opacity: 0 }} animate={{ x: 0, opacity: 1 }} exit={{ x: -300, opacity: 0 }} transition={{duration: 1}} 
+                     className="Image" alt="ME Phote" 
+                     src={Me}></motion.img> 
+            </Link> 
              </span>
 
               <motion.div  initial={{ x: 300, opacity: 0 }} animate={{ x: 0, opacity: 1 }} exit={{ x: -300, opacity: 0 }} transition={{duration: 1}} className="details" >
