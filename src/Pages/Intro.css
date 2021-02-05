@@ -5,8 +5,13 @@
 
 .Intro-page {
     min-height: 100vh;
-    color: black;
+    color: rgb(76, 73, 73);
     overflow: hidden;
+}
+
+/* orange arrow */
+.arrow {
+   
 }
 
 /* Photo */
@@ -63,11 +68,6 @@
     }
 }
 
-
-.Image:hover {
-   transform: scale(1.1);
-}
-
 /* text on left of screen */
 .remark-box {
     position: absolute;
@@ -78,7 +78,7 @@
 
 .remark {
     font-size: 2vw;
-    font-weight: 800;
+    font-weight: 200;
 }
 
 .code {
@@ -144,8 +144,6 @@
         font-size: 3vw;
     }
 }
-
-/* Arrow */
 
 
 

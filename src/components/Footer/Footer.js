@@ -5,6 +5,7 @@ import {motion} from 'framer-motion';
 import './Footer.css';
 
 import {FaGithub, FaLinkedin, FaInstagram, FaRegEnvelope} from 'react-icons/fa';
+import lamps from '../../Images/lamps.png'
 
 const Footer = () => {
     const exit = {
@@ -14,11 +15,24 @@ const Footer = () => {
     };
 
     return(
-        <footer className="footer">
+        <footer style={{ backgroundImage: `url('${lamps}')` }} className="footer">
             <span className="footer-work">Work With We</span>
+
             <span className="footer-colab">wannt to colab? i'm looking for new projects</span>
+
             <Link to="/contact" className="footer-button"> contact me <FaRegEnvelope className="envelope"/> </Link>
-            <span className="footer-links"><FaLinkedin /><FaGithub className="github"/><FaInstagram/></span>
+
+            <span className="footer-links"> 
+              <a className="btn"> <FaLinkedin className="fa linkdin"/> </a> 
+              <a className="btn"> <FaGithub className="fa github"/> </a>
+              <a className="btn"> <FaInstagram className="fa instagram"/> </a>
+            </span>
+
+            <div className="cv-box">
+              <a className="cv-button" download href="/Resume/CV.pdf">
+              <p className="cv-words" > Download CV </p> </a> 
+            </div>
+
         </footer>
     )
 }
