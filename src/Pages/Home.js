@@ -3,9 +3,11 @@ import {motion} from 'framer-motion';
 
 import useWidth from '../components/useWidth';
 import Me from '../Images/Me.png';
+import security from '../Images/security.png';
+import background2 from '../Images/background2.png';
 
 import './Home.css';
-import {FaLevelDownAlt} from 'react-icons/fa';
+import {FaLevelDownAlt, FaLongArrowAltLeft} from 'react-icons/fa';
 
 const Home = () => {
     const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9 ]};
@@ -76,7 +78,7 @@ const Home = () => {
                            <motion.span >r</motion.span>
                         </motion.span>
              </motion.h1>
-
+            
              <div className="frame" >
              <motion.div  style={{y: "105%", width:"100%", paddingTop: "35%",height: {ref:elementDOM}, }}
                           initial={{ x: -300, opacity: 0, scale:1.0 }} animate={{ x: 0, opacity: 1 }} exit={{ x: -300, opacity: 0 }} transition={{delay: .2, ...transition}}
@@ -89,17 +91,41 @@ const Home = () => {
              </motion.div>        
              </div>  
              </div>
+
              
              <motion.div className="arrow-container" initial="hidden" animate="visible" exit={{opacity: 0}} variants={firstName}>                
                 <span className="word-above-arrow"> Explore </span>
                 <FaLevelDownAlt className="down-arrow" /> 
             </motion.div>
 
-            <motion.div className="part2" >
+            <div className="part2" >
               <div className="portfolio" >
                    <span className="portfolio-words" >Welcome to my personal portfolio</span>
               </div>
-             </motion.div>
+ 
+              <div className="iframe-square" style={{backgroundImage: `url('${background2}')`}}>
+                    
+                    <div className="iframe-info" >
+                    <h3 style={{ fontSize: "3vh", paddingTop: "20%", marginLeft: "30%" }}>Website design</h3>
+                    <span className="iframe-text" style={{ fontSize: "2vh", marginLeft: "30%" }}>An example of what i can do</span>
+                    <div style={{ marginTop: "5%", fontSize: "2.5vh", marginLeft: "25%" }} > <FaLongArrowAltLeft style={{ fontSize:"1rem" }} /> visit </div> 
+                    </div>
+                    <img className="security-image" src={security} alt="security link" />
+             </div>
+
+             <div className="iframe-square" style={{backgroundImage: `url('${background2}')`}}>
+
+                    <div className="iframe-info" >
+                    <h3 style={{ fontSize: "3vh", paddingTop: "20%", marginLeft: "30%" }}>web security</h3>
+                    <span className="iframe-text" style={{ fontSize: "2vh", marginLeft: "30%" }}>Past project involving user authentication and kubernetes deployemnt</span>
+                    <div style={{ marginTop: "5%", fontSize: "2.5vh", marginLeft: "25%" }} > <FaLongArrowAltLeft style={{ fontSize:"1rem" }} /> visit </div>
+                    </div>
+                    <img className="security-image" src={security} alt="security link" />
+
+             </div>
+
+             </div>
+
              </div>  
     )
 }

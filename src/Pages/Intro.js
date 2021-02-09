@@ -4,6 +4,7 @@ import {motion} from 'framer-motion';
 
 import Me from '../Images/Me.png'
 import arrow from '../Images/arrow.png'
+import background1 from '../Images/background1.png'
 import './Intro.css';
 
 
@@ -16,9 +17,9 @@ const Intro = () => {
     };
 
     return(
-        <div className="Intro-page">
-            <img style={{ backgroundImage: `url('${arrow}')` }} className="arrow"  />
-                
+
+        <div className="Intro-page" >
+           
               <div className="image-box">   
 
               <span className="image-wrapper" >      
@@ -53,10 +54,9 @@ const Intro = () => {
                                 exit={{ opacity: 0 }} 
                                 transition={{delay: .2, ...transition}} 
                                 className="remark"> I didn't draw this picture of me, but I can 
-                    <motion.span className="code"> code </motion.span> a little</motion.span>
-                   
+                    <motion.span  className="code"> code </motion.span> a little</motion.span>
+
               </div>
-        
         </div>
     )
 }

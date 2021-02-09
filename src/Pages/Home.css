@@ -53,12 +53,18 @@
  position: absolute;
  display: flex;
  flex-direction: column;
- left: 80%;
+ left: 75%;
 }
 
-@media (min-width: 850px) {
+@media (max-width: 850px) {
     .word-above-arrow {
         font-size: 10rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .arrow-container {
+       left: 65%;
     }
 }
 
@@ -78,8 +84,8 @@
 
 /* second part of page */
 /* portfolio section */
-.portfolio {
-    height: 75vh;
+.part2 {
+    height: 130vh;
     margin-top: 45%;
     background: silver;
 }
@@ -90,5 +96,47 @@
 }
 
 
+.iframe-square {
+    width: 41%;
+    height: 36%;
+    margin-left: 40%;
+    margin-top: 5%;
+    margin-bottom: 8%;
+    color: orange;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.security-image{
+    position: absolute;
+    width: 30vw;
+    height: 30vh;
+    left: -45%;
+    top: 20%;
+}
+
+@media (max-width: 700px) {
+    .iframe-square {
+        width: 50%;
+        margin-left: 40%;
+        margin-top: 15%;
+    }
+}
+
+@media (max-width: 450px) {
+    .iframe-square {
+        margin-top: 20%;
+    }
+}
+
+@media (max-width: 575px) {
+    .security-image {
+        width: 40vw;
+        left: -50%;
+    }
+}
 
 

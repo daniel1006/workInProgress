@@ -7,15 +7,23 @@
     min-height: 100vh;
     color: rgb(76, 73, 73);
     overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* orange arrow */
+.arrow-box {
+    position: relative;
+}
+
 .arrow {
-   
+position: absolute;
+overflow: hidden;
+
 }
 
 /* Photo */
-
 .image-box {
     display: flex;
     align-items: center;
@@ -58,7 +66,7 @@
 @media (max-width:675px) {
     .Image {    
       width: 75vw;
-      margin-top: 7vh;
+      margin-top: 10vh;
     }
 }
 
