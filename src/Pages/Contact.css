@@ -1,5 +1,5 @@
 .Contact-page {
     min-height: 100vh;
-    margin-top: 56px;
-    color: white;
+    overflow: hidden;
+    color: orange;
 }
