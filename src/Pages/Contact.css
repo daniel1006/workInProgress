@@ -1,5 +1,146 @@
 .Contact-page {
     min-height: 100vh;
     overflow: hidden;
+    color: black;
+}
+
+.background {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Header */
+.contact-header {
+    text-align: center;
+    margin-top: 10%;
+    font-size: 3.5rem;
+}
+
+.contact-phone {
+    text-align: center;
+    font-size: 1.7rem;
+}
+
+.talk {
     color: orange;
 }
+
+/* Image */
+.image-container {
+    position: relative;
+}
+
+.letter-image {
+   position: fixed;
+    width: 60%;
+    bottom: -10%;
+}
+
+@media (max-width:1556px) {
+    .letter-image {    
+      top: 15vh;
+    }
+}
+
+@media (max-width:1250px) {
+    .letter-image {    
+      top: 25vh;
+    }
+}
+
+@media (max-width:800px) {
+    .letter-image {    
+      top: 33vh;
+    }
+}
+
+@media (max-width:425px) {
+    .letter-image {    
+      top: 43vh;
+    }
+}
+
+/* email form */
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 40%;
+    margin-top: 10%;
+}
+
+@media (max-width:1350px) {
+    .form {    
+      margin-top: 15%;
+    }
+}
+
+@media (max-width:800px) {
+    .form {    
+      margin-top: 30%;
+    }
+}
+
+@media (max-width:575px) {
+    .form {    
+      margin-top: 40%;
+    }
+}
+
+@media (max-width:425px) {
+    .form {    
+      margin-top: 55%;
+    }
+}
+
+input {
+    width: 30vw;
+    height: 32px;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+}
+
+.message-area {
+    width: 30vw;
+    height: 10vh;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    resize: none;
+}
+
+/* send button */
+.send-btn {
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 2%;
+    width: 30vw;
+    height: 40px;
+    line-height: 50px;
+    font-size: 1.5rem;
+    border-radius: 15px;
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    transition: .3s;
+    background-color: white;
+}
+
+.send-btn:hover {
+    box-shadow:  0 6px 5px rgba(255, 165, 0);
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+}
+
+.btn-words {
+    position: relative;
+    bottom: 12%;
+    color: black;
+}
+

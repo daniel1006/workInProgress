@@ -92,7 +92,8 @@
 
 .portfolio-words {
     font-size: 2rem;
-    color: black;
+    color: rgb(76, 73, 73);
+    font-weight: bold;
 }
 
 
@@ -139,4 +140,9 @@
     }
 }
 
-
+/* text in ifame-square */
+@media (max-width: 1507px) {
+    .iframe-header {
+       
+    }
+}
