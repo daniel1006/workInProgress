@@ -6,7 +6,6 @@ import './Footer.css';
 
 import {FaGithub, FaLinkedin, FaInstagram, FaRegEnvelope} from 'react-icons/fa';
 import lamps from '../../Images/lamps.png';
-import background1 from '../../Images/background1.png';
 
 const Footer = () => {
     const exit = {

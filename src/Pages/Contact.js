@@ -2,12 +2,11 @@ import React, { bind, } from 'react';
 import Axios from 'axios';
 import {motion} from 'framer-motion';
 
-import {FaPhoneAlt} from 'react-icons/fa';
+import {FaPhoneAlt, FaInstagram, FaLinkedin, FaGithub} from 'react-icons/fa';
 import './Contact.css';
+import '../components/Footer/Footer.css';
 
 import letter from '../Images/letter.png';
-import background1 from '../Images/background1.png';
-
 
 
 class Contact extends React.Component {
@@ -61,6 +60,7 @@ class Contact extends React.Component {
       }
 
    render() {
+    const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9 ]};
     const exit = {
         exit: {
         opacity: 0,
@@ -68,9 +68,24 @@ class Contact extends React.Component {
     };
     return(
         <div className="Contact-page">
-       
-       <div className="background" style={{ backgroundImage: `url('${background1}')` }} >
-          <motion.h1 {...exit} className="contact-header" > 
+
+         <div className="image-container" >
+           <motion.img key={letter.src} src={letter.src} 
+                       initial={{ x: -300, opacity: 0}} 
+                       animate={{ x: 0, opacity: 1 }} 
+                       transition={{delay: .2, ...transition}}
+                       exit={{ x: -300, opacity: 0 }} 
+
+                       src={letter} alt={letter} />
+         </div>
+   
+          <motion.h1 {...exit} 
+          initial={{ opacity: 0 }} 
+          animate={{ opacity: 1 }} 
+          exit={{ opacity: 0 }} 
+          transition={{delay: .2, ...transition}}
+          className="contact-header" > 
+
             <span>L</span>
             <span>e</span>
             <span style={{color:"orange"}}>t</span>
@@ -81,18 +96,37 @@ class Contact extends React.Component {
             <span>k</span>
           </motion.h1>
 
-          <div className="contact-phone" > 
+          <motion.div initial={{ opacity: 0 }} 
+                                animate={{ opacity: 1 }} 
+                                exit={{ opacity: 0 }} 
+                                transition={{delay: .2, ...transition}}
+                                className="contact-phone" > 
+
            <FaPhoneAlt style={{marginRight: "1%" }} /> 
-           Europe: +46 72-939-5856 <div> North-America: +1 438-490-7441 </div> 
-           </div>
-           
-           </div>
 
-         <div className="image-container" >
-           <img className="letter-image" src={letter} alt={letter} />
-         </div>
+           Europe: +46 72-939-5856 <motion.div> 
+           North-America: +1 438-490-7441 </motion.div> 
+           </motion.div>
 
-          <form className="form" onSubmit={this.handleSubmit}  >
+           <motion.span initial={{ opacity: 0 }} 
+                                animate={{ opacity: 1 }} 
+                                exit={{ opacity: 0 }} 
+                                transition={{delay: .2, ...transition}}
+                                className="footer-links" > 
+
+              <a className="btn"> <FaLinkedin className="fa linkdin"/> </a> 
+              <a className="btn"> <FaGithub className="fa github"/> </a>
+              <a className="btn"> <FaInstagram className="fa instagram"/> </a>
+              
+              <a className="btn cv-button" download href="/Resume/CV.pdf">
+              <p className="fa cv-words" > Download CV </p> </a> 
+          </motion.span>
+
+          <motion.form initial={{ opacity: 0 }} 
+                                animate={{ opacity: 1 }} 
+                                exit={{ opacity: 0 }} 
+                                transition={{delay: .2, ...transition}}
+                                className="form" onSubmit={this.handleSubmit}  >
 
           <div className="name-box" >
           <group >
@@ -126,10 +160,10 @@ class Contact extends React.Component {
             
                      <button className="send-btn" type="submit" disabled={this.state.disabled} > <span className="btn-words" >Send</span> </button>
 
-                     {this.state.emailSent === true && <p className="Success"> Email sent !</p>}
-                     {this.state.emailSent === false && <p className="Failure"> Error! Email has not been sent </p>}
+                     {this.state.emailSent === true && <p className="Success" style={{color:"green"}}> Email sent !</p>}
+                     {this.state.emailSent === false && <p className="Failure" style={{color:"red"}}> Error! Email has not been sent </p>}
             
-          </form>
+          </motion.form>
        
        </div>
     );

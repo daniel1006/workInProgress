@@ -64,7 +64,7 @@ class App extends Component {
          <Route path="/" exact component={Intro}> <Intro /> </Route>   
          <Route path="/home" component={Home}> <Home /> <Footer /> </Route>
          <Route path="/about" component={About}> <About /> <Footer /> </Route>
-         <Route path="/contact" component={Contact} > <Contact /> <Footer /> </Route>
+         <Route path="/contact" component={Contact} > <Contact /> </Route>
          
        </Switch>
        </AnimatePresence>

@@ -14,7 +14,13 @@
 .contact-header {
     text-align: center;
     margin-top: 10%;
-    font-size: 3.5rem;
+    font-size: 4.5rem;
+}
+
+@media (max-width:768px) {
+    .contact-header {    
+      margin-top: 15vh;
+    }
 }
 
 .contact-phone {
@@ -26,38 +32,49 @@
     color: orange;
 }
 
+/* Phone number */
+.contact-phone {
+    font-size: 1.3rem;
+}
+
+@media (max-width:370px) {
+    .contact-phone {    
+      font-size: 1.1rem;
+    }
+}
+
 /* Image */
 .image-container {
     position: relative;
 }
 
-.letter-image {
-   position: fixed;
-    width: 60%;
-    bottom: -10%;
+.image-container img{
+   position: absolute;
+   width: 55%;
+   margin-top: 30vh;
 }
 
-@media (max-width:1556px) {
-    .letter-image {    
-      top: 15vh;
+@media (max-width:1350px) {
+    .image-container img{    
+      top: 8vh;
     }
 }
 
 @media (max-width:1250px) {
-    .letter-image {    
-      top: 25vh;
+    .image-container img{    
+      top: 8vh;
     }
 }
 
 @media (max-width:800px) {
-    .letter-image {    
-      top: 33vh;
+    .image-container img{    
+      top: 20vh;
     }
 }
 
-@media (max-width:425px) {
-    .letter-image {    
-      top: 43vh;
+@media (max-width:650px) {
+    .image-container img{    
+      display: none;
     }
 }
 
@@ -69,30 +86,38 @@
     align-items: center;
     text-align: center;
     margin-left: 40%;
-    margin-top: 10%;
+    margin-top: 8%;
 }
 
 @media (max-width:1350px) {
     .form {    
-      margin-top: 15%;
+      margin-top: 10%;
     }
 }
 
 @media (max-width:800px) {
     .form {    
-      margin-top: 30%;
+      margin-top: 15%;
     }
 }
 
 @media (max-width:575px) {
     .form {    
-      margin-top: 40%;
+      margin-top: 20%;
     }
 }
 
-@media (max-width:425px) {
+@media (max-width:650px) {
     .form {    
-      margin-top: 55%;
+      margin-top: 20%;
+      margin-left: 4%;
+    }
+}
+
+@media (max-width:435px) {
+    .form {    
+      margin-top: 27%;
+      margin-left: 4%;
     }
 }
 
@@ -104,6 +129,12 @@ input {
     outline: none;
 }
 
+@media (max-width:650px) {
+    input {    
+      width: 65vw;
+    }
+}
+
 .message-area {
     width: 30vw;
     height: 10vh;
@@ -111,6 +142,12 @@ input {
     border-radius: 15px;
     outline: none;
     resize: none;
+}
+
+@media (max-width:650px) {
+    .message-area {    
+      width: 65vw;
+    }
 }
 
 /* send button */
@@ -143,4 +180,20 @@ input {
     bottom: 12%;
     color: black;
 }
+
+
+
+@media (max-width:650px) {
+    .send-btn {    
+      width: 65vw;
+    }
+}
+
+/* web links */
+.footer-links {
+    
+    margin-top: 10px;
+    
+}
+
 

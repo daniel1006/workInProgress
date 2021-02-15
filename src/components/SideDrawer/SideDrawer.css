@@ -1,7 +1,7 @@
 /* stylizing side drawer  */
 .side-drawer {
     height: 100%;
-    background: white;
+    background: silver;
     box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
@@ -25,21 +25,24 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .side-drawer li {
     margin: 0.5rem 0;
+    margin-bottom: 50px;
 }
 
 .side-drawer a {
-     color: blue;
+     color: #4c5a21;
      text-decoration: none;
      font-size: 1.2rem;
+     font-size: 2rem;
 }
 
 .side-drawer a:hover,
 .side-drawer a:active {
-    color: palevioletred;
+    color: orange
 }
 
 /* hides hamburger icon in desktop mode */

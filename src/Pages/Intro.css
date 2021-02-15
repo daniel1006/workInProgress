@@ -6,6 +6,8 @@
 .Intro-page {
     min-height: 100vh;
     color: rgb(76, 73, 73);
+    background-color: seashell;
+    background-blend-mode: multiply;
     overflow: hidden;
     background-position: center;
     background-repeat: no-repeat;

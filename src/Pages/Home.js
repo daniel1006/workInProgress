@@ -2,12 +2,13 @@ import React, { useRef } from 'react';
 import {motion} from 'framer-motion';
 
 import useWidth from '../components/useWidth';
-import Me from '../Images/Me.png';
-import security from '../Images/security.png';
-import background2 from '../Images/background2.png';
 
 import './Home.css';
 import {FaLevelDownAlt, FaLongArrowAltLeft} from 'react-icons/fa';
+
+import Me from '../Images/Me.png';
+import security from '../Images/security.png';
+import background2 from '../Images/background2.png';
 
 const Home = () => {
     const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9 ]};
