@@ -2,6 +2,7 @@
     min-height: 100vh;
     overflow: hidden;
     color: black;
+    background-color: #DCDBDF;
 }
 
 .background {
@@ -190,10 +191,4 @@ input {
 }
 
 /* web links */
-.footer-links {
-    
-    margin-top: 10px;
-    
-}
-
 

@@ -51,6 +51,7 @@ padding-top: 5%;
 
 /* contact button */
 .footer-button {
+    margin-top: 0.5%;
     position: relative;
     display: inline-block;
     text-align: center;

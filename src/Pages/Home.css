@@ -141,8 +141,71 @@
 }
 
 /* text in ifame-square */
-@media (max-width: 1507px) {
-    .iframe-header {
-       
+.first-iframe-header {
+    font-size: 2.5rem;
+    padding-top: 15vh;
+    margin-left: 30%;
+}
+
+.second-iframe-header {
+    font-size: 2.5rem;
+    padding-top: 25%;
+    margin-left: 30%;
+}
+
+.iframe-text {
+    font-size: 1.3rem;
+    margin-left: 30%;
+}
+
+.iframe-link {
+    font-size: 2.5rem;
+    margin-left: 25%;
+    margin-top: 5%;
+}
+
+@media (max-width: 1305px) {
+    .iframe-text {
+        font-size: 1rem;
+    }
+    .iframe-link {
+        font-size: 2rem;
+    }
+    .first-iframe-header, .second-iframe-header {
+        font-size: 2rem;
+    }
+
+}
+
+@media (max-width: 1010px) {
+    .second-iframe-header {
+        padding-top: 35%;
+    }
+    .iframe-text {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 818px) {
+    .second-iframe-header {
+        padding-top: 45%;
+    }
+}
+
+@media (max-width: 555px) {
+    .iframe-text {
+        display: none;
+    }
+    .iframe-link {
+        font-size: 1.5rem;
+    }
+    .first-iframe-header, .second-iframe-header {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 555px) {
+    .second-iframe-header {
+        padding-top: 90%;
     }
 }

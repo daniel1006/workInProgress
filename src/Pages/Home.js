@@ -107,9 +107,9 @@ const Home = () => {
               <div className="iframe-square" style={{backgroundImage: `url('${background2}')`}}>
                     
                     <div className="iframe-info" >
-                    <h3  className="iframe-header"  style={{ fontSize: "2vw", paddingTop: "20vh", marginLeft: "30%" }}>Website design</h3>
-                    <span className="iframe-text" style={{ fontSize: "1.3vw", marginLeft: "30%" }}>An example of what i can do</span>
-                    <div  className="iframe-link" style={{ marginTop: "5%", fontSize: "2.5vw", marginLeft: "25%" }} > <FaLongArrowAltLeft style={{ fontSize:"1.5vw" }} /> visit </div> 
+                    <h3  className="first-iframe-header">Website design</h3>
+                    <span className="iframe-text">An example of what i can do</span>
+                    <div  className="iframe-link" > <FaLongArrowAltLeft style={{ fontSize:"1.5rem" }} /> visit </div> 
                     </div>
                     <img className="security-image" src={security} alt="security link" />
              </div>
@@ -117,9 +117,9 @@ const Home = () => {
              <div className="iframe-square" style={{backgroundImage: `url('${background2}')`}}>
 
                     <div className="iframe-info" >
-                    <h3 className="iframe-header" style={{ fontSize: "2vw", paddingTop: "20%", marginLeft: "30%" }}>web security</h3>
-                    <span className="iframe-text" style={{ fontSize: "1.3vw", marginLeft: "30%" }}>Past project involving user authentication and kubernetes deployemnt</span>
-                    <div className="iframe-link" style={{ marginTop: "5%", fontSize: "2.5vw", marginLeft: "25%" }} > <FaLongArrowAltLeft style={{ fontSize:"1.5vw" }} /> visit </div>
+                    <h3 className="second-iframe-header">web security</h3>
+                    <span className="iframe-text">User authentication / kubernetes deployemnt</span>
+                    <div className="iframe-link" > <FaLongArrowAltLeft style={{ fontSize:"1.5rem" }} /> visit </div>
                     </div>
                     <img className="security-image" src={security} alt="security link" />
 

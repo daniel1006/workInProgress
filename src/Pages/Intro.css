@@ -5,24 +5,12 @@
 
 .Intro-page {
     min-height: 100vh;
-    color: rgb(76, 73, 73);
-    background-color: seashell;
-    background-blend-mode: multiply;
+    color: #2B333D;
+    background: #DCDBDF;
     overflow: hidden;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-/* orange arrow */
-.arrow-box {
-    position: relative;
-}
-
-.arrow {
-position: absolute;
-overflow: hidden;
-
 }
 
 /* Photo */
@@ -78,6 +66,16 @@ overflow: hidden;
     }
 }
 
+/* Sqaure on left side of screen */
+.intro-top-sqaure {
+    background-color:#D2B3A9;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 35vw;
+    height: 20vh;
+}
+
 /* text on left of screen */
 .remark-box {
     position: absolute;
@@ -92,7 +90,7 @@ overflow: hidden;
 }
 
 .code {
-    color: orange;
+    color: #fd5e53;
 }
 
 @media (max-width:850px) {
@@ -123,6 +121,7 @@ overflow: hidden;
  margin-top: 1rem;
  font-size: 1.1vw;
  text-transform: lowercase;
+ z-index: 1;
 }
 
 .span2 {

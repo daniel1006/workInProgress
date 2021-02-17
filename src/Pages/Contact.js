@@ -114,12 +114,6 @@ class Contact extends React.Component {
                                 transition={{delay: .2, ...transition}}
                                 className="footer-links" > 
 
-              <a className="btn"> <FaLinkedin className="fa linkdin"/> </a> 
-              <a className="btn"> <FaGithub className="fa github"/> </a>
-              <a className="btn"> <FaInstagram className="fa instagram"/> </a>
-              
-              <a className="btn cv-button" download href="/Resume/CV.pdf">
-              <p className="fa cv-words" > Download CV </p> </a> 
           </motion.span>
 
           <motion.form initial={{ opacity: 0 }} 
