@@ -5,6 +5,7 @@ import './About.css';
 import jade from '../Images/jade.jpg';
 
 const About = () => {
+    const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9 ]};
     const exit = {
         exit: {
         opacity: 0,
@@ -15,23 +16,63 @@ const About = () => {
         <div className="About-page" >
 
             <div className="jade-container">
-            <div className="jade" style={{ backgroundImage: `url('${jade}')` }}> </div>
+            <motion.div className="jade" key={jade.src} src={jade.src} 
+                                  initial={{ x: -300, opacity: 0}} 
+                                  animate={{ x: 0, opacity: 1 }} 
+                                  transition={{delay: .2, ...transition}}
+                                  exit={{ x: -300, opacity: 0 }} 
+                                  style={{ backgroundImage: `url('${jade}')` }}> 
+            </motion.div>
+
             </div>
 
-            <motion.h1 {...exit} className="header1"> About me  </motion.h1>
-            <h1 className="header2"> I swear it's interesting </h1>
+            <motion.h1 className="header1"
+                       initial={{ opacity: 0 }} 
+                       animate={{ opacity: 1 }} 
+                       exit={{ opacity: 0 }} 
+                       transition={{delay: .2, ...transition}}
+                       > About me  </motion.h1>
+
+            <motion.h1 className="header2"
+                       initial={{ opacity: 0 }} 
+                       animate={{ opacity: 1 }} 
+                       exit={{ opacity: 0 }} 
+                       transition={{delay: .2, ...transition}}
+                       > I swear it's interesting </motion.h1>
 
             <div className="about-square">
                  <div className="inside-square">
-                     <h1> Blah blah blah </h1>
-                     <div> blah blah blah blah blah blah blah blah blah</div>
+                     <motion.h1
+                     initial={{ opacity: 0 }} 
+                     animate={{ opacity: 1 }} 
+                     exit={{ opacity: 0 }} 
+                     transition={{delay: .2, ...transition}}
+                     > Blah blah blah </motion.h1>
+
+                     <motion.div
+                     initial={{ opacity: 0 }} 
+                     animate={{ opacity: 1 }} 
+                     exit={{ opacity: 0 }} 
+                     transition={{delay: .2, ...transition}}
+                     > blah blah blah blah blah blah blah blah blah</motion.div>
                  </div>
             </div>
 
             <div className="about-second-square">
                 <div className="second-inside-square">
-                   <h1> blah blah blah </h1>
-                   <div> blah blah blah blah blah blah blah blah blah </div>
+                   <motion.h1
+                   initial={{ opacity: 0 }} 
+                   animate={{ opacity: 1 }} 
+                   exit={{ opacity: 0 }} 
+                   transition={{delay: .2, ...transition}}
+                   > blah blah blah </motion.h1>
+
+                   <motion.div
+                   initial={{ opacity: 0 }} 
+                   animate={{ opacity: 1 }} 
+                   exit={{ opacity: 0 }} 
+                   transition={{delay: .2, ...transition}}
+                   > blah blah blah blah blah blah blah blah blah </motion.div>
                 </div>
             </div>
  

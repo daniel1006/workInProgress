@@ -1,5 +1,6 @@
 .Home-page {
-    color: rgb(76, 73, 73);
+    color: #2B333D;
+    background-color: silver;
 }
 
 .picture-vh {
@@ -71,7 +72,7 @@
 .down-arrow {
     font-size: 3.5rem;
     color: transparent;
-    stroke: rgb(76, 73, 73);
+    stroke: #2B333D;
     stroke-width: 25px;   
     margin-left: 20%;
     margin-top: 5%;
@@ -87,12 +88,12 @@
 .part2 {
     height: 130vh;
     margin-top: 45%;
-    background: silver;
+    background-color: #DCDBDF;
 }
 
 .portfolio-words {
     font-size: 2rem;
-    color: rgb(76, 73, 73);
+    color: #2B333D;
     font-weight: bold;
 }
 

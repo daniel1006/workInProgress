@@ -26,6 +26,7 @@
     text-align: center;
     overflow: hidden;
     width: 100%;
+    z-index: 1;
 }
 
 .Image {
@@ -66,7 +67,7 @@
     }
 }
 
-/* Sqaure on left side of screen */
+/* Sqaures */
 .intro-top-sqaure {
     background-color:#D2B3A9;
     position: absolute;
@@ -74,6 +75,91 @@
     left: 0;
     width: 35vw;
     height: 20vh;
+}
+
+@media (max-width:850px) {
+    .intro-top-sqaure {    
+      width: 33vw;
+      top: 14%;
+    }
+}
+
+@media (max-width:675px) {
+    .intro-top-sqaure {    
+      width: 33vw;
+      top: 14%;
+      height: 15vh;
+    }
+}
+
+@media (max-width:575px) {
+    .intro-top-sqaure {    
+      width: 75vw;
+      height: 11vh;
+      top: 9%;
+      left: 0;
+    }
+}
+
+@media (max-width:365px) {
+    .intro-top-sqaure {    
+      height: 9vh;
+    }
+}
+
+.intro-bottom-square {
+    background-color: #fd5e53;
+    position: fixed;
+    width: 50vw;
+    height: 20%;
+    bottom: 0;
+    right: 0;
+}
+
+@media (max-width:1440px) {
+    .intro-bottom-square {    
+      bottom: 9vh;
+    }
+}
+
+@media (max-width:1440px) {
+    .intro-bottom-square {    
+      bottom: 17vh;
+    }
+}
+
+@media (max-width:1168px) {
+    .intro-bottom-square {    
+      bottom: 22vh;
+    } 
+}
+
+@media (max-width:768px) {
+    .intro-bottom-square {    
+      bottom: 29vh;
+      width: 48vw;
+    }
+}
+
+@media (max-width:675px) {
+    .intro-bottom-square {    
+      bottom: 14vh;
+      width: 48vw;
+    }
+}
+
+@media (max-width:560px) {
+    .intro-bottom-square {    
+      bottom: 22vh;
+      width: 48vw;
+    }
+}
+
+@media (max-width:413px) {
+    .intro-bottom-square {    
+      bottom: 33vh;
+      width: 48vw;
+    }
 }
 
 /* text on left of screen */
@@ -119,18 +205,22 @@
 /* details under photo */
 .details {
  margin-top: 1rem;
- font-size: 1.1vw;
+ margin-left: 11%;
+ font-size: 1.5vw;
  text-transform: lowercase;
  z-index: 1;
 }
 
 .span2 {
    margin-left: 2rem;
+   font-size: 3vw;
 }
 
 @media (max-width:1289px) {
     .details {
         margin-top: .8rem;
+    } .span2 {
+        font-size: 3.5vw;
     }
 }
 
@@ -138,12 +228,22 @@
     .details {
         margin-top: .5rem;
         font-size: 2vw;
+    } .span2 {
+        font-size: 4vw;
+        margin-left: 1rem;
+    }
+    .details{
+        margin-left: 17%;
     }
 }
 
 @media (max-width:600px) {
     .span2 {
-        margin-left: 0.5rem;
+        margin-left: 1.5rem;
+        font-size: 5vw;
+    }
+    .details{
+        margin-left: 2%;
     }
 }
 
@@ -151,6 +251,13 @@
     .details {
         margin-top: .2rem;
         font-size: 3vw;
+    }
+    .span2 {
+        margin-left: 1rem;
+        font-size: 6vw;
+    }
+    .details{
+        margin-left: 21%;
     }
 }
 

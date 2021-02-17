@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import {motion} from 'framer-motion';
 
 import Me from '../Images/Me.png';
+import background4 from '../Images/background4.jpg';
 import './Intro.css';
 
 
@@ -16,7 +17,7 @@ const Intro = () => {
 
     return(
 
-        <div className="Intro-page" >
+        <div className="Intro-page"  style={{ backgroundImage: `url('${background4}')` }} >
            
               <div className="image-box">   
 
@@ -42,6 +43,8 @@ const Intro = () => {
               <span className="span1" > Daniel Lanthier </span> 
               <span className="span2" > Web Developer </span>
               </motion.div>
+
+              <div className="intro-bottom-square"/>
 
               </div>
 
