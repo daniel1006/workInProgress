@@ -47,8 +47,6 @@ class App extends Component {
   return(
     <main>
 
-      <title> LanthierWebDesign </title>
-
 <    div className="background" >
   
     <Router>
