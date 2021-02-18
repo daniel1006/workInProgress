@@ -122,7 +122,7 @@ class Contact extends React.Component {
                                 transition={{delay: .2, ...transition}}
                                 className="form" onSubmit={this.handleSubmit}  >
 
-          <div className="name-box" netlify >
+          <div className="name-box">
           <group >
              <label>
                 <div style={{fontSize: "2rem"}} >Full Name </div>
