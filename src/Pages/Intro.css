@@ -6,7 +6,8 @@
 .Intro-page {
     min-height: 100vh;
     color: #2B333D;
-    background: #DCDBDF;
+    background: rgb(43,51,61);
+    background: linear-gradient(14deg, rgba(43,51,61,1) 14%, rgba(192,192,192,1) 52%, rgba(43,51,61,1) 90%);
     overflow: hidden;
     background-position: center;
     background-repeat: no-repeat;

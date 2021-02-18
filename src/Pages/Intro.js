@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom';
 import {motion} from 'framer-motion';
 
 import Me from '../Images/Me.png';
-import background4 from '../Images/background4.jpg';
 import './Intro.css';
 
 
@@ -17,7 +16,7 @@ const Intro = () => {
 
     return(
 
-        <div className="Intro-page"  style={{ backgroundImage: `url('${background4}')` }} >
+        <div className="Intro-page"  >
            
               <div className="image-box">   
 
