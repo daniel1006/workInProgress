@@ -47,7 +47,7 @@ class App extends Component {
   return(
     <main>
 
-<    div className="background" >
+   <div className="background" >
   
     <Router>
     
