@@ -1,3 +1,3 @@
-[submodule "workInProgress"]
-	path = workInProgress
+[submodule "backend"]
+	path = backend
 	url = https://github.com/daniel1006/Email-API.git
