@@ -8,7 +8,7 @@ import {FaLevelDownAlt, FaLongArrowAltLeft} from 'react-icons/fa';
 
 import Me from '../Images/Me.png';
 import security from '../Images/security.png';
-import background2 from '../Images/background2.png';
+import design from '../Images/design.png'
 
 const Home = () => {
     const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9 ]};
@@ -34,25 +34,6 @@ const Home = () => {
             opacity: 0,
             }
         };
-
-        const [lastYPos, setLastYPos] = React.useState(0);
-        const [shouldShowActions, setShouldShowActions] = React.useState(false);
-      
-        React.useEffect(() => {
-          function handleScroll() {
-            const yPos = window.scrollY;
-            const isScrollingUp = yPos < lastYPos;
-      
-            setShouldShowActions(isScrollingUp);
-            setLastYPos(yPos);
-          }
-      
-          window.addEventListener("scroll", handleScroll, false);
-      
-          return () => {
-            window.removeEventListener("scroll", handleScroll, false);
-          };
-        }, [lastYPos]);
 
     return(
      
@@ -86,7 +67,6 @@ const Home = () => {
                           className="home-style">  
 
              <motion.img style={{y: {ref:elementDOM} > 1440 ? "-90%" : "-63.5%", transition: {delay: .2, ...transition},}}
-                         animate={{ scale: shouldShowActions ? 1 : 1.15 }} transition={{ scale: { duration: 0.5 } }}
                          className="home-image" alt="ME Phote" src={Me} /> 
                 
              </motion.div>        
@@ -104,24 +84,24 @@ const Home = () => {
                    <span className="portfolio-words" >Welcome to my personal portfolio</span>
               </div>
  
-              <div className="iframe-square" style={{backgroundImage: `url('${background2}')`}}>
+              <div className="iframe-square">
                     
                     <div className="iframe-info" >
                     <h3  className="first-iframe-header">Website design</h3>
                     <span className="iframe-text">An example of what i can do</span>
                     <div  className="iframe-link" > <FaLongArrowAltLeft style={{ fontSize:"1.5rem" }} /> visit </div> 
                     </div>
-                    <img className="security-image" src={security} alt="security link" />
+                    <img className="security-image" src={security} alt="design" />
              </div>
 
-             <div className="iframe-square" style={{backgroundImage: `url('${background2}')`}}>
+             <div className="iframe-square">
 
                     <div className="iframe-info" >
                     <h3 className="second-iframe-header">web security</h3>
                     <span className="iframe-text">User authentication / kubernetes deployemnt</span>
                     <div className="iframe-link" > <FaLongArrowAltLeft style={{ fontSize:"1.5rem" }} /> visit </div>
                     </div>
-                    <img className="security-image" src={security} alt="security link" />
+                    <img className="security-image" src={design}  alt="security link" />
 
              </div>
 

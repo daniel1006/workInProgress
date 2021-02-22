@@ -156,9 +156,9 @@
     }
 }
 
-@media (max-width:413px) {
+@media (max-width:414px) {
     .intro-bottom-square {    
-      bottom: 33vh;
+      bottom: 5vh;
       width: 48vw;
     }
 }
