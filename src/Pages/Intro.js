@@ -1,8 +1,10 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {motion} from 'framer-motion';
+import {FaLevelUpAlt} from 'react-icons/fa';
 
 import Me from '../Images/Me.png';
+import forest from '../Images/forest.jpg';
 import './Intro.css';
 
 
@@ -15,9 +17,8 @@ const Intro = () => {
     };
 
     return(
-
-        <div className="Intro-page"  >
-           
+        <div className="Intro-page">
+                       
               <div className="image-box">   
 
               <span className="image-wrapper" >      
@@ -28,33 +29,21 @@ const Intro = () => {
                          animate={{ x: 0, opacity: 1 }} 
                          exit={{ x: 300, opacity: 0 }} 
                          whileHover={{scale: 1.1}} 
-                       
-                         className="Image" alt="ME Phote" src={Me}/> 
+                         className="Me-photo" alt="ME Phote" src={Me}/> 
              </Link> 
              </span>
 
-              <motion.div initial={{ opacity: 0 }} 
-                          animate={{ opacity: 1 }} 
-                          exit={{ opacity: 0 }} 
-                          transition={{delay: .2, ...transition}} 
-                          className="details" >
-
-              <span className="span1" > Daniel Lanthier </span> 
-              <span className="span2" > Web Developer </span>
-              </motion.div>
-
-              <div className="intro-bottom-square"/>
-
               </div>
 
-             <div className="intro-top-sqaure" /> 
               <div className="remark-box" >
                    <motion.span initial={{ opacity: 0 }} 
                                 animate={{ opacity: 1 }} 
                                 exit={{ opacity: 0 }} 
                                 transition={{delay: .2, ...transition}} 
-                                className="remark"> I didn't draw this picture of me, but I can 
-                    <motion.span  className="code"> code </motion.span> a little</motion.span>
+                                className="remark"> Junior Web  
+                                <motion.span style={{ textDecoration: "underline solid darkOrange"}}> Developer</motion.span> 
+                    <div> <FaLevelUpAlt style={{ transform: [{rotateY: '90deg'}] }} /> </div>            
+                    </motion.span>
 
               </div>
         </div>

@@ -6,34 +6,51 @@
 .Intro-page {
     min-height: 100vh;
     color: #2B333D;
-    background: rgb(43,51,61);
-    background: linear-gradient(14deg, rgba(43,51,61,1) 14%, rgba(192,192,192,1) 52%, rgba(43,51,61,1) 90%);
     overflow: hidden;
+
+}
+
+.Intro-page :after {
+    background-image: url("../Images/forest.jpg");
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+	width: 100vw;
+	height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
+     filter: blur(5px);
+     z-index: -9;
 }
-
 /* Photo */
 .image-box {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  position: absolute;
+  z-index: 0;
+  left: 32%;
+  top: 2%;
+  overflow: hidden;
 }
-
 
 .image-wrapper {
     display: inline-block;
     text-align: center;
     overflow: hidden;
     width: 100%;
-    z-index: 1;
 }
 
-.Image {
+.Me-photo {
     width: 38vw;
-    transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;  
+    background-image: url("../Images/forest.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom bottom;
 }
+
+
 
 @media (max-width:1075px) {
     .Image {    
@@ -45,6 +62,7 @@
 @media (max-width:900px) {
     .Image {    
       width: 55vw;
+      margin-right: 0;
     }
 }
 
@@ -68,199 +86,49 @@
     }
 }
 
-/* Sqaures */
-.intro-top-sqaure {
-    background-color:#D2B3A9;
-    position: absolute;
-    top: 20%;
-    left: 0;
-    width: 35vw;
-    height: 20vh;
-}
-
-@media (max-width:850px) {
-    .intro-top-sqaure {    
-      width: 33vw;
-      top: 14%;
-    }
-}
-
-@media (max-width:675px) {
-    .intro-top-sqaure {    
-      width: 33vw;
-      top: 14%;
-      height: 15vh;
-    }
-}
-
-@media (max-width:575px) {
-    .intro-top-sqaure {    
-      width: 75vw;
-      height: 11vh;
-      top: 9%;
-      left: 0;
-    }
-}
-
-@media (max-width:365px) {
-    .intro-top-sqaure {    
-      height: 9vh;
-    }
-}
-
-.intro-bottom-square {
-    background-color: #fd5e53;
-    position: fixed;
-    width: 50vw;
-    height: 20%;
-    bottom: 0;
-    right: 0;
-}
-
-@media (max-width:1440px) {
-    .intro-bottom-square {    
-      bottom: 9vh;
-    }
-}
-
-@media (max-width:1440px) {
-    .intro-bottom-square {    
-      bottom: 17vh;
-    }
-}
-
-@media (max-width:1168px) {
-    .intro-bottom-square {    
-      bottom: 22vh;
-    } 
-}
-
-@media (max-width:768px) {
-    .intro-bottom-square {    
-      bottom: 29vh;
-      width: 48vw;
-    }
-}
-
-@media (max-width:675px) {
-    .intro-bottom-square {    
-      bottom: 14vh;
-      width: 48vw;
-    }
-}
-
-@media (max-width:560px) {
-    .intro-bottom-square {    
-      bottom: 22vh;
-      width: 48vw;
-    }
-}
-
-@media (max-width:414px) {
-    .intro-bottom-square {    
-      bottom: 5vh;
-      width: 48vw;
-    }
-}
-
 /* text on left of screen */
 .remark-box {
     position: absolute;
     max-width: 30vw;
     top: 25%;
-    left: 5%;
+    left: 5%; 
 }
 
 .remark {
-    font-size: 2vw;
+    font-size: 3vw;
     font-weight: 200;
-}
-
-.code {
-    color: #fd5e53;
 }
 
 @media (max-width:850px) {
     .remark-box {    
         top: 20%;
+        font-size: 4.5vw;
     }
 }
 
-@media (max-width:600px) {
+@media (max-width:675px) {
         .remark-box {    
-            top: 18%;
+            top: 10%;
+            left: 35%;
+            max-width: 45vw;
+        }
+        .remark {
+            font-size: 5vw;
         }
 }
 
 @media (max-width:575px) {
         .remark-box {    
             top: 10%;
-            left: 30%;
+            left: 35%;
             max-width: 45vw;
         }
         .remark {
-            font-size: 4vw;
+            font-size: 6vw;
         }
 }
 
-/* details under photo */
-.details {
- margin-top: 1rem;
- margin-left: 11%;
- font-size: 1.5vw;
- text-transform: lowercase;
- z-index: 1;
-}
 
-.span2 {
-   margin-left: 2rem;
-   font-size: 3vw;
-}
-
-@media (max-width:1289px) {
-    .details {
-        margin-top: .8rem;
-    } .span2 {
-        font-size: 3.5vw;
-    }
-}
-
-@media (max-width:870px) {
-    .details {
-        margin-top: .5rem;
-        font-size: 2vw;
-    } .span2 {
-        font-size: 4vw;
-        margin-left: 1rem;
-    }
-    .details{
-        margin-left: 17%;
-    }
-}
-
-@media (max-width:600px) {
-    .span2 {
-        margin-left: 1.5rem;
-        font-size: 5vw;
-    }
-    .details{
-        margin-left: 2%;
-    }
-}
-
-@media (max-width:500px) {
-    .details {
-        margin-top: .2rem;
-        font-size: 3vw;
-    }
-    .span2 {
-        margin-left: 1rem;
-        font-size: 6vw;
-    }
-    .details{
-        margin-left: 21%;
-    }
-}
 
 
 

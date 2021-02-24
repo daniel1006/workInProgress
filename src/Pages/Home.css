@@ -1,6 +1,7 @@
 .Home-page {
     color: #2B333D;
-    background-color: silver;
+    background: rgb(192,192,192);
+background: linear-gradient(0deg, rgba(192,192,192,1) 0%, rgba(255,255,255,1) 36%, rgba(192,192,192,1) 75%, rgba(119,136,153,1) 100%);
 }
 
 .picture-vh {
@@ -66,6 +67,7 @@
 @media (max-width: 425px) {
     .arrow-container {
        left: 65%;
+       bottom: 15%;
     }
 }
 
@@ -208,6 +210,12 @@
 
 @media (max-width: 555px) {
     .second-iframe-header {
-        padding-top: 90%;
+        padding-top: 60%;
+    }
+}
+
+@media (max-width: 400px) {
+    .second-iframe-header {
+        padding-top: 110%;
     }
 }
