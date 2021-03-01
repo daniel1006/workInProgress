@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {motion} from 'framer-motion';
-import {FaLevelUpAlt} from 'react-icons/fa';
+import {FaLongArrowAltRight} from 'react-icons/fa';
 
 import Me from '../Images/Me.png';
 import forest from '../Images/forest.jpg';
@@ -42,7 +42,7 @@ const Intro = () => {
                                 transition={{delay: .2, ...transition}} 
                                 className="remark"> Junior Web  
                                 <motion.span style={{ textDecoration: "underline solid darkOrange"}}> Developer</motion.span> 
-                    <div> <FaLevelUpAlt style={{ transform: [{rotateY: '90deg'}] }} /> </div>            
+                                <FaLongArrowAltRight className="intro-icon" />           
                     </motion.span>
 
               </div>

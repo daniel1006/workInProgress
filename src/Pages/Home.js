@@ -8,7 +8,7 @@ import {FaLevelDownAlt, FaLongArrowAltLeft} from 'react-icons/fa';
 
 import Me from '../Images/Me.png';
 import security from '../Images/security.png';
-import design from '../Images/design.png'
+import design from '../Images/design.png';
 
 const Home = () => {
     const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9 ]};
@@ -37,7 +37,7 @@ const Home = () => {
 
     return(
      
-        <div className="Home-page">
+        <div className="Home-page" >
          <div className="picture-vh">  
              <motion.h1 className="name" {...exit}> 
                         <motion.span className="first"  initial="hidden" animate="visible"  variants={firstName}>

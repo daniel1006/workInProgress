@@ -7,10 +7,6 @@
     min-height: 100vh;
     color: #2B333D;
     overflow: hidden;
-
-}
-
-.Intro-page :after {
     background-image: url("../Images/forest.jpg");
     content: '';
     position: fixed;
@@ -22,68 +18,89 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-     filter: blur(5px);
-     z-index: -9;
-}
-/* Photo */
-.image-box {
-  position: absolute;
-  z-index: 0;
-  left: 32%;
-  top: 2%;
-  overflow: hidden;
 }
 
-.image-wrapper {
-    display: inline-block;
-    text-align: center;
-    overflow: hidden;
-    width: 100%;
+/* Photo */
+.image-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: 5%;
 }
 
 .Me-photo {
     width: 38vw;
     transition: 0.5s ease-in-out;  
-    background-image: url("../Images/forest.jpg");
+    background-image: url("../Images/forest2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: bottom bottom;
+    background-position: top right;
 }
 
+@media (max-width:1450px) {
+    .image-box{    
+      top: 10%;
+    } .Me-photo {
+        width: 42vw;
+    }
+}
 
+@media (max-width:1150px) {
+    .image-box{    
+      top: 17%;
+    } .Me-photo {
+        width: 48vw;
+    }
+}
 
 @media (max-width:1075px) {
-    .Image {    
-      width: 48vw;
-    }
+    .image-box{    
+        top: 20%;
+      } .Me-photo {
+          width: 50vw;
+      }
 }
 
-
 @media (max-width:900px) {
-    .Image {    
-      width: 55vw;
-      margin-right: 0;
-    }
+    .image-box{    
+        top: 24%;
+      } .Me-photo {
+          width: 53vw;
+      }
 }
 
 @media (max-width:750px) {
-    .Image {    
-      width: 65vw;
-    }
+    .image-box{    
+        top: 27%;
+      } .Me-photo {
+          width: 56vw;
+      }
 }
 
 
 @media (max-width:675px) {
-    .Image {    
-      width: 75vw;
-      margin-top: 10vh;
-    }
+    .image-box{    
+        top: 30%;
+      } .Me-photo {
+          width: 60vw;
+      }
 }
 
 @media (max-width:475px) {
-    .Image {    
-      width: 95vw;
-    }
+    .image-box{    
+        top: 32%;
+      } .Me-photo {
+          width: 75vw;
+      }
+}
+
+@media (max-width:320px) {
+    .image-box{    
+        top: 25%;
+      } .Me-photo {
+          width: 80vw;
+      }
 }
 
 /* text on left of screen */
@@ -103,6 +120,8 @@
     .remark-box {    
         top: 20%;
         font-size: 4.5vw;
+    } .remark {
+        font-size: 3vw;
     }
 }
 
@@ -126,6 +145,12 @@
         .remark {
             font-size: 6vw;
         }
+}
+
+/* react arrow icon */
+.intro-icon {
+    margin-left: 3%;
+    margin-top: 15px;
 }
 
 
