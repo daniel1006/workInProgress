@@ -70,7 +70,7 @@ class Contact extends React.Component {
 
           </motion.span>
 
-          <motion.form initial={{ opacity: 0 }} 
+          <form initial={{ opacity: 0 }} 
                                 animate={{ opacity: 1 }} 
                                 exit={{ opacity: 0 }} 
                                 transition={{delay: .2, ...transition}}
@@ -108,7 +108,7 @@ class Contact extends React.Component {
             
                      <button className="send-btn" type="submit"  > <span className="btn-words" >Send</span> </button>
 
-          </motion.form>
+          </form>
        
        </div>
     );
