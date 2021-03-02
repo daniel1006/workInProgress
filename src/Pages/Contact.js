@@ -84,29 +84,29 @@ class Contact extends React.Component {
 
           <div className="name-box">
              <p>
-                <label style={{fontSize: "2rem"}} id="contact-form-name-label" for="contact-form-name" >Full Name </label>
-                <input className="full-name" type="text" name="name" id="contact-form-name" aria-labelledby="contact-form-name-label" /> 
+                <label style={{fontSize: "2rem"}} id="contact-form-name-label" for="Name" >Full Name </label>
+                <input className="full-name" type="text" name="name" id="name" /> 
              </p> 
           </div>
           
          
           <div className="email-box" > 
              <p>
-                <label style={{fontSize: "2rem"}} id="contact-form-email-label" for="contact-form-email" > Email </label> 
-                <input className="Email" type="email" name="email" id="contact-form-email" aria-labelledby="contact-form-email-label" /> 
+                <label style={{fontSize: "2rem"}} id="contact-form-email-label" for="Email" > Email </label> 
+                <input className="Email" type="email" name="email" id="email"  /> 
              </p>
           </div>
           
 
           <div className="message-box" >
              <p >
-             <lable style={{fontSize: "2rem"}} id="contact-form-message-label" for="contact-form-message" >  Message </lable>
-                <textarea className="message-area" name="message" id="contact-form-message" aria-labelledby="contact-form-message-label" rows="7"  /> 
+             <lable style={{fontSize: "2rem"}} id="contact-form-message-label" for="Message" >  Message </lable>
+                <textarea className="message-area" name="message" id="message" rows="7"  /> 
              </p> 
           </div>
         
             
-                     <button className="send-btn" type="submit"  > <span className="btn-words" >Send</span> </button>
+                     <button className="send-btn" type="submit"  > Send </button>
 
           </form>
        
