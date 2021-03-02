@@ -11,6 +11,7 @@ import Contact from './Pages/Contact';
 import About from './Pages/About';
 import Home from './Pages/Home';
 import Intro from './Pages/Intro';
+import ScrollToTop from './components/ScrollToTop';
 
 import './App.css';
 
@@ -70,6 +71,8 @@ class App extends Component {
        </AnimatePresence>
         )}
        />
+
+    <ScrollToTop />
 
     </Router>
     </div>

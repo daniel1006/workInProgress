@@ -88,27 +88,27 @@
 /* second part of page */
 /* portfolio section */
 .part2 {
-    height: 130vh;
+    height: 150vh;
     margin-top: 45%;
     background-color: #bdd4e7;
-background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
+    background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
 
 }
 
 .portfolio-words {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #2B333D;
     font-weight: bold;
+    text-align: center;
 }
-
 
 .iframe-square {
     width: 41%;
-    height: 36%;
+    height: 30%;
     margin-left: 40%;
     margin-top: 5%;
     margin-bottom: 8%;
-    color: orange;
+    color: #ffa812;
     background-color: #a40606;
     background-image: linear-gradient(315deg, #a40606 0%, #d98324 74%);
  
@@ -143,8 +143,8 @@ background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
 
 @media (max-width: 575px) {
     .security-image {
-        width: 40vw;
-        left: -50%;
+        width: 50vw;
+        left: -65%;
     }
 }
 
@@ -157,7 +157,7 @@ background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
 
 .second-iframe-header {
     font-size: 2.5rem;
-    padding-top: 25%;
+    padding-top: 20%;
     margin-left: 30%;
 }
 
@@ -191,6 +191,8 @@ background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
     }
     .iframe-text {
         font-size: 0.7rem;
+    } .portfolio-words {
+        font-size: 2rem;
     }
 }
 
@@ -209,6 +211,8 @@ background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
     }
     .first-iframe-header, .second-iframe-header {
         font-size: 1.5rem;
+    } .portfolio-words {
+        font-size: 1.2;
     }
 }
 
@@ -221,5 +225,13 @@ background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
 @media (max-width: 400px) {
     .second-iframe-header {
         padding-top: 110%;
+    } .portfolio-words {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 370px) {
+    .second-iframe-header {
+        padding-top:50%;
     }
 }

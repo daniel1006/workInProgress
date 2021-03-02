@@ -81,7 +81,8 @@ const Home = () => {
 
             <div className="part2" >
               <div className="portfolio" >
-                   <span className="portfolio-words" >Welcome to my personal portfolio</span>
+                   <h1 className="portfolio-words" style={{paddingTop:"10%",position:"relative"}}> Welcome to my personal portfolio  </h1>
+                   <h2 className="portfolio-words" >here you'll find some of my past projects</h2>
               </div>
  
               <div className="iframe-square">
