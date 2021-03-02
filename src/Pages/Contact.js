@@ -78,7 +78,9 @@ class Contact extends React.Component {
                                 name="simpleContactForm" 
                                 id="simple-contact-form"
                                 method="POST" 
-                                data-netlify="true">
+                                action="/thanks"
+                                data-netlify="true"
+                                data-netlify-recaptcha="true">
 
           <div className="name-box">
              <p>
