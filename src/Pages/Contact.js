@@ -69,37 +69,46 @@ class Contact extends React.Component {
                                 className="footer-links" > 
 
           </motion.span>
-          <form
-    name="simpleContactForm"
-    method="POST"
-    data-netlify="true"
-    data-netlify-recaptcha="true"
-    id="simple-contact-form"
-    class="contact-form"
->
-    <p class="form-row">
-        <label id="contact-form-name-label" for="contact-form-name" class="form-label">Name</label>
-        <input type="text" name="name" id="contact-form-name" aria-labelledby="contact-form-name-label" class="form-input" />
-    </p>
-    <p class="form-row">
-        <label id="contact-form-email-label" for="contact-form-email" class="form-label">Email address</label>
-        <input type="email" name="email" id="contact-form-email" aria-labelledby="contact-form-email-label" class="form-input" />
-    </p>
-    <p class="form-row">
-        <label id="contact-form-message-label" for="contact-form-message" class="form-label">Message</label>
-        <textarea
-            name="message"
-            id="contact-form-message"
-            aria-labelledby="contact-form-message-label"
-            class="form-textarea"
-            rows="7"
-        ></textarea>
-    </p>
-    <div data-netlify-recaptcha="true" class="form-row"></div>
-    <p class="form-row form-submit">
-        <button type="submit" class="button">Send Message</button>
-    </p>
-</form>
+
+          <motion.form initial={{ opacity: 0 }} 
+                                animate={{ opacity: 1 }} 
+                                exit={{ opacity: 0 }} 
+                                transition={{delay: .2, ...transition}}
+                                className="form" 
+                                name="simpleContactForm" 
+                                id="simple-contact-form"
+                                method="POST" 
+                                data-netlify="true"
+                                data-netlify-recaptcha="true"
+                                netlify>
+
+          <div className="name-box">
+             <p>
+                <label style={{fontSize: "2rem"}} id="contact-form-name-label" for="contact-form-name" >Full Name </label>
+                <input className="full-name" type="text" name="name" id="contact-form-name" aria-labelledby="contact-form-name-label" /> 
+             </p> 
+          </div>
+          
+         
+          <div className="email-box" > 
+             <p>
+                <label style={{fontSize: "2rem"}} id="contact-form-email-label" for="contact-form-email" > Email </label> 
+                <input className="Email" type="email" name="email" id="contact-form-email" aria-labelledby="contact-form-email-label" /> 
+             </p>
+          </div>
+          
+
+          <div className="message-box" >
+             <p >
+             <lable style={{fontSize: "2rem"}} id="contact-form-message-label" for="contact-form-message" >  Message </lable>
+                <textarea className="message-area" name="message" id="contact-form-message" aria-labelledby="contact-form-message-label" rows="7"  /> 
+             </p> 
+          </div>
+        
+            
+                     <button className="send-btn" type="submit"  > <span className="btn-words" >Send</span> </button>
+
+          </motion.form>
        
        </div>
     );
