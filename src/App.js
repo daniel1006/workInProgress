@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {Route, BrowserRouter as Router, Switch} from 'react-router-dom';
-import {withRouter} from 'react-router'
 import { AnimatePresence } from 'framer-motion';
 
 import SideDrawer from './components/SideDrawer/SideDrawer';
@@ -12,10 +11,9 @@ import About from './Pages/About';
 import Home from './Pages/Home';
 import Intro from './Pages/Intro';
 import ScrollToTop from './components/ScrollToTop';
+import ThankYou from './Pages/ThankYou';
 
 import './App.css';
-
-
 
 
 class App extends Component {
@@ -52,8 +50,6 @@ class App extends Component {
   
     <Router>
     
-    <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
-     <SideDrawer show={this.state.sideDrawerOpen} />
      {backdrop}
 
      <Route
@@ -63,9 +59,10 @@ class App extends Component {
         <Switch location={location} key={location.pathname} >
         
          <Route path="/" exact component={Intro}> <Intro /> </Route>   
-         <Route path="/home" component={Home}> <Home /> <Footer /> </Route>
-         <Route path="/about" component={About}> <About /> <Footer /> </Route>
-         <Route path="/contact" component={Contact} > <Contact /> </Route>
+         <Route path="/home" component={Home}> <Home /> <Footer /> <Toolbar drawerClickHandler={this.drawerToggleClickHandler} /> <SideDrawer show={this.state.sideDrawerOpen} /> </Route>
+         <Route path="/about" component={About}> <About /> <Footer /> <Toolbar drawerClickHandler={this.drawerToggleClickHandler} /> <SideDrawer show={this.state.sideDrawerOpen} /> </Route>
+         <Route path="/contact" component={Contact} > <Contact /> <Toolbar drawerClickHandler={this.drawerToggleClickHandler} /> <SideDrawer show={this.state.sideDrawerOpen} /> </Route>
+         <Route path="/thankyou" component={ThankYou} > <ThankYou /> </Route>
          
        </Switch>
        </AnimatePresence>

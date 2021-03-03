@@ -1,8 +1,7 @@
-import React, { bind, } from 'react';
-import Axios from 'axios';
+import React from 'react';
 import {motion} from 'framer-motion';
 
-import {FaPhoneAlt, FaInstagram, FaLinkedin, FaGithub} from 'react-icons/fa';
+import {FaPhoneAlt} from 'react-icons/fa';
 import './Contact.css';
 import '../components/Footer/Footer.css';
 
@@ -11,54 +10,7 @@ import letter from '../Images/letter.png';
 
 class Contact extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            name: '',
-            email: '',
-            message: '',
-            disabled: false,
-            emailSent: null,
-        };
-
-        this.handleChange = this.handleChange.bind(this);
-     
-    }
-
-    handleChange(event,field) {
-        this.setState({ [field]: event.target.value});
-      }
-
-      handleSubmit = (event) => {
-          event.preventDefault();
-
-          this.setState({
-              disabled: true,       
-          });
-
-              Axios.post('http://localhost:3030/api/daniel', this.state)
-              .then(res => {
-                  if(res.data.success) {
-                this.setState({
-                    disabled: false,
-                    emailSent:true
-                });
-            } else {
-                    this.setState({
-                        disabled: false,
-                        emailSent:false
-                    });
-                }           
-              })
-              .catch(err => {
-                  this.setState({
-                      disabled:false,
-                      emailSent: false
-                  });
-              })
-          
-      }
-
+    
    render() {
     const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9 ]};
     const exit = {
@@ -108,25 +60,26 @@ class Contact extends React.Component {
            North-America: +1 438-490-7441 </motion.div> 
            </motion.div>
 
-           <motion.span initial={{ opacity: 0 }} 
-                                animate={{ opacity: 1 }} 
-                                exit={{ opacity: 0 }} 
-                                transition={{delay: .2, ...transition}}
+           <motion.span 
                                 className="footer-links" > 
 
           </motion.span>
 
-          <motion.form initial={{ opacity: 0 }} 
-                                animate={{ opacity: 1 }} 
-                                exit={{ opacity: 0 }} 
-                                transition={{delay: .2, ...transition}}
-                                className="form" onSubmit={this.handleSubmit}  >
+          <motion.form action="https://getsimpleform.com/messages?form_api_token=b8b608e5b1e421e47f3b0d996f5e2453" 
+                       method="post" 
+                       className="form" 
+                       initial={{ opacity: 0 }} 
+                       animate={{ opacity: 1 }} 
+                       exit={{ opacity: 0 }} 
+                       transition={{delay: .2, ...transition}}>
+
+          <input type='hidden' name='redirect_to' value='https://lanthierwebdesign.com//thankyou' />   
 
           <div className="name-box">
           <group >
              <label>
                 <div style={{fontSize: "2rem"}} >Full Name </div>
-                <input className="full-name" type="text" name="name" value={this.state.name} onChange={(event)=>this.handleChange(event,"name")} /> 
+                <input className="full-name" name='message' type='text'  /> 
              </label> 
           </group>
           </div>
@@ -136,7 +89,7 @@ class Contact extends React.Component {
           <group >
              <label>
                 <div style={{fontSize: "2rem"}} > Email </div> 
-                <input className="Email" type="email" name="email" value={this.state.email} onChange={(event)=>this.handleChange(event,"email")} /> 
+                <input className="Email" type="email" name="email"  /> 
              </label>
           </group>
           </div>
@@ -146,17 +99,11 @@ class Contact extends React.Component {
           <group >
              <label >
              <div style={{fontSize: "2rem"}} >  Message </div>
-                <textarea className="message-area" type="message" name="message" value={this.state.message} onChange={(event)=>this.handleChange(event,"message")} /> 
+                <textarea className="message-area" name="content"  /> 
              </label> 
           </group>
           </div>
-        
-            
-                     <button className="send-btn" type="submit" disabled={this.state.disabled} > <span className="btn-words" >Send</span> </button>
-
-                     {this.state.emailSent === true && <p className="Success" style={{color:"green"}}> Email sent !</p>}
-                     {this.state.emailSent === false && <p className="Failure" style={{color:"red"}}> Error! Email has not been sent </p>}
-            
+                <button className="send-btn" type='submit' value='Test form' > <span className="btn-words" >Send</span> </button>
           </motion.form>
        
        </div>
