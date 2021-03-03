@@ -73,7 +73,7 @@ class Contact extends React.Component {
                        exit={{ opacity: 0 }} 
                        transition={{delay: .2, ...transition}}>
 
-          <input type='hidden' name='redirect_to' value='https://lanthierwebdesign.com//thankyou' />   
+          <input type='hidden' name='redirect_to' value='https://lanthierwebdesign.com/thankyou' />  
 
           <div className="name-box">
           <group >
