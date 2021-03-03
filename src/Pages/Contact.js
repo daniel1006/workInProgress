@@ -11,7 +11,53 @@ import letter from '../Images/letter.png';
 
 class Contact extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: '',
+            email: '',
+            message: '',
+            disabled: false,
+            emailSent: null,
+        };
 
+        this.handleChange = this.handleChange.bind(this);
+     
+    }
+
+    handleChange(event,field) {
+        this.setState({ [field]: event.target.value});
+      }
+
+      handleSubmit = (event) => {
+          event.preventDefault();
+
+          this.setState({
+              disabled: true,       
+          });
+
+              Axios.post('http://localhost:3030/api/daniel', this.state)
+              .then(res => {
+                  if(res.data.success) {
+                this.setState({
+                    disabled: false,
+                    emailSent:true
+                });
+            } else {
+                    this.setState({
+                        disabled: false,
+                        emailSent:false
+                    });
+                }           
+              })
+              .catch(err => {
+                  this.setState({
+                      disabled:false,
+                      emailSent: false
+                  });
+              })
+          
+      }
 
    render() {
     const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9 ]};
@@ -70,45 +116,48 @@ class Contact extends React.Component {
 
           </motion.span>
 
-          <form initial={{ opacity: 0 }} 
+          <motion.form initial={{ opacity: 0 }} 
                                 animate={{ opacity: 1 }} 
                                 exit={{ opacity: 0 }} 
                                 transition={{delay: .2, ...transition}}
-                                className="form" 
-                                name="simpleContactForm" 
-                                id="simple-contact-form"
-                                method="POST" 
-                                data-netlify="true"
-                                data-netlify-recaptcha="true"
-                                netlify>
+                                className="form" onSubmit={this.handleSubmit}  >
 
           <div className="name-box">
-             <p>
-                <label style={{fontSize: "2rem"}} id="contact-form-name-label" for="Name" >Full Name </label>
-                <input className="full-name" type="text" name="name" id="name" /> 
-             </p> 
+          <group >
+             <label>
+                <div style={{fontSize: "2rem"}} >Full Name </div>
+                <input className="full-name" type="text" name="name" value={this.state.name} onChange={(event)=>this.handleChange(event,"name")} /> 
+             </label> 
+          </group>
           </div>
           
          
           <div className="email-box" > 
-             <p>
-                <label style={{fontSize: "2rem"}} id="contact-form-email-label" for="Email" > Email </label> 
-                <input className="Email" type="email" name="email" id="email"  /> 
-             </p>
+          <group >
+             <label>
+                <div style={{fontSize: "2rem"}} > Email </div> 
+                <input className="Email" type="email" name="email" value={this.state.email} onChange={(event)=>this.handleChange(event,"email")} /> 
+             </label>
+          </group>
           </div>
           
 
           <div className="message-box" >
-             <p >
-             <lable style={{fontSize: "2rem"}} id="contact-form-message-label" for="Message" >  Message </lable>
-                <textarea className="message-area" name="message" id="message" rows="7"  /> 
-             </p> 
+          <group >
+             <label >
+             <div style={{fontSize: "2rem"}} >  Message </div>
+                <textarea className="message-area" type="message" name="message" value={this.state.message} onChange={(event)=>this.handleChange(event,"message")} /> 
+             </label> 
+          </group>
           </div>
         
             
-                     <button className="send-btn" type="submit"  > Send </button>
+                     <button className="send-btn" type="submit" disabled={this.state.disabled} > <span className="btn-words" >Send</span> </button>
 
-          </form>
+                     {this.state.emailSent === true && <p className="Success" style={{color:"green"}}> Email sent !</p>}
+                     {this.state.emailSent === false && <p className="Failure" style={{color:"red"}}> Error! Email has not been sent </p>}
+            
+          </motion.form>
        
        </div>
     );

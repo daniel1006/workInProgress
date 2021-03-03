@@ -47,14 +47,18 @@ const About = () => {
                      animate={{ opacity: 1 }} 
                      exit={{ opacity: 0 }} 
                      transition={{delay: .2, ...transition}}
-                     > Blah blah blah </motion.h1>
+                     > The really interesting read </motion.h1>
 
                      <motion.div
                      initial={{ opacity: 0 }} 
                      animate={{ opacity: 1 }} 
                      exit={{ opacity: 0 }} 
                      transition={{delay: .2, ...transition}}
-                     > blah blah blah blah blah blah blah blah blah</motion.div>
+                     > If your reading this then you may be wondering who I am. Well don't worry cause the wait is over! 
+                       My name is Daniel and I grew up in Montreal, Canada, but am curently based in Sweden. <br /> <br/> 
+                       
+
+                     </motion.div>
                  </div>
             </div>
 
@@ -65,14 +69,24 @@ const About = () => {
                    animate={{ opacity: 1 }} 
                    exit={{ opacity: 0 }} 
                    transition={{delay: .2, ...transition}}
-                   > blah blah blah </motion.h1>
+                   > What I can do and work with </motion.h1>
 
                    <motion.div
                    initial={{ opacity: 0 }} 
                    animate={{ opacity: 1 }} 
                    exit={{ opacity: 0 }} 
                    transition={{delay: .2, ...transition}}
-                   > blah blah blah blah blah blah blah blah blah </motion.div>
+                   >• JavaScript frameworks <br/>
+                    • RESTful services and APIs <br/> 
+                    • Responsive and Mobile Design <br/> 
+                    • Version control/GIT <br/> 
+                    <br/> 
+                    • Docker deployment <br/> 
+                    • Kubernetes cluster management <br/> 
+                    • User Authentication/Authorization<br/> 
+                    <br/> 
+                    These skills allow me to use a wide range of tools to create responsive styalized websites with client side fucntionality.
+                    </motion.div>
                 </div>
             </div>
  

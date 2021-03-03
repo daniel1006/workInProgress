@@ -1,7 +1,6 @@
 .Home-page {
     color: #2B333D;
-    background-color: #ffffff;
-    background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+
 }
 
 .picture-vh {
@@ -88,11 +87,8 @@
 /* second part of page */
 /* portfolio section */
 .part2 {
-    height: 150vh;
+    height: 180vh;
     margin-top: 45%;
-    background-color: #bdd4e7;
-    background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
-
 }
 
 .portfolio-words {
@@ -106,7 +102,7 @@
     width: 41%;
     height: 30%;
     margin-left: 40%;
-    margin-top: 5%;
+    margin-top: 6%;
     margin-bottom: 8%;
     color: #ffa812;
     background-color: #a40606;

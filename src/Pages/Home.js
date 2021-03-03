@@ -72,16 +72,16 @@ const Home = () => {
              </motion.div>        
              </div>  
              </div>
-
-             
+                      
              <motion.div className="arrow-container" initial="hidden" animate="visible" exit={{opacity: 0}} variants={firstName}>                
                 <span className="word-above-arrow"> Explore </span>
                 <FaLevelDownAlt className="down-arrow" /> 
             </motion.div>
 
             <div className="part2" >
+            <hr style={{width:"80%", color:"#4c5a21", backgroundColor:"#4c5a21", borderColor:"#4c5a21"}} />
               <div className="portfolio" >
-                   <h1 className="portfolio-words" style={{paddingTop:"10%",position:"relative"}}> Welcome to my personal portfolio  </h1>
+                   <h1 className="portfolio-words" style={{paddingTop:"7%",position:"relative"}}> Welcome to my personal portfolio  </h1>
                    <h2 className="portfolio-words" >here you'll find some of my past projects</h2>
               </div>
  
