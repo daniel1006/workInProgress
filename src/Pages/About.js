@@ -75,8 +75,8 @@ const About = () => {
                    initial={{ opacity: 0 }} 
                    animate={{ opacity: 1 }} 
                    exit={{ opacity: 0 }} 
-                   transition={{delay: .2, ...transition}}
-                   >• JavaScript frameworks <br/>
+                   transition={{delay: .2, ...transition}}>
+                    • JavaScript frameworks <br/>
                     • RESTful services and APIs <br/> 
                     • Responsive and Mobile Design <br/> 
                     • Version control/GIT <br/> 

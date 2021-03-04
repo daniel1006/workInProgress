@@ -7,10 +7,64 @@ import '../components/Footer/Footer.css';
 
 import letter from '../Images/letter.png';
 
+const initialState = {
+   name: "",
+   email: "",
+   message: "",
+   nameError: "",
+   emailError: "",
+   messageError: ""
+};
 
-class Contact extends React.Component {
+export default class Contact extends React.Component {
+  
+   state = initialState;
 
-    
+   handleChange = event => {
+      const isCheckbox = event.target.type === "checkbox";
+      this.setState({
+        [event.target.name]: isCheckbox
+          ? event.target.checked
+          : event.target.value
+      });
+    };
+  
+
+    validate = () => {
+      let nameError = "";
+      let emailError = "";
+      let messageError = "";
+  
+      if (!this.state.name) {
+        nameError = "name cannot be blank";
+      }
+
+      if (!this.state.message) {
+         messageError = "message cannot be blank";
+       } 
+  
+      if (!this.state.email.includes("@")) {
+        emailError = "invalid email";
+      }
+  
+      if (emailError || nameError || messageError) {
+        this.setState({ emailError, nameError, messageError});
+        return false;
+      }
+  
+      return true;
+    };
+  
+    handleSubmit = event => {
+      event.preventDefault();
+      const isValid = this.validate();
+      if (isValid) {
+        console.log(this.state);
+        // clear form
+        this.setState(initialState);
+      }
+    };
+
    render() {
     const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9 ]};
     const exit = {
@@ -71,37 +125,39 @@ class Contact extends React.Component {
                        initial={{ opacity: 0 }} 
                        animate={{ opacity: 1 }} 
                        exit={{ opacity: 0 }} 
-                       transition={{delay: .2, ...transition}}>
-
-          <input type='hidden' name='redirect_to' value='https://lanthierwebdesign.com/thankyou' />  
+                       transition={{delay: .2, ...transition}}
+                       onSubmit={this.handleSubmit}>
+        
+         <input type='hidden' name='redirect_to' value='http://localhost:3000/thankyou' />                 
 
           <div className="name-box">
           <group >
              <label>
                 <div style={{fontSize: "2rem"}} >Full Name </div>
-                <input className="full-name" name='message' type='text'  /> 
+                <input className="full-name" name='name' type='text' value={this.state.name} onChange={this.handleChange} /> 
              </label> 
           </group>
+          <div style={{color:"red"}}>{this.state.nameError}</div>
           </div>
           
-         
           <div className="email-box" > 
           <group >
              <label>
                 <div style={{fontSize: "2rem"}} > Email </div> 
-                <input className="Email" type="email" name="email"  /> 
+                <input className="Email" type="email" name="email" value={this.state.email} onChange={this.handleChange} /> 
              </label>
           </group>
+          <div style={{color:"red"}}>{this.state.emailError}</div>
           </div>
           
-
           <div className="message-box" >
           <group >
              <label >
              <div style={{fontSize: "2rem"}} >  Message </div>
-                <textarea className="message-area" name="content"  /> 
+                <textarea className="message-area" name="message" value={this.state.message} onChange={this.handleChange} /> 
              </label> 
           </group>
+          <div style={{color:"red"}}>{this.state.messageError}</div>
           </div>
                 <button className="send-btn" type='submit' value='Test form' > <span className="btn-words" >Send</span> </button>
           </motion.form>
@@ -110,5 +166,3 @@ class Contact extends React.Component {
     );
     }
 }
-
-export default Contact;

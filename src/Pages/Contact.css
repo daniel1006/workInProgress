@@ -164,6 +164,7 @@ input {
     font-size: 1.5rem;
     border-radius: 15px;
     border: none;
+    outline: none;
     text-align: center;
     vertical-align: middle;
     overflow: hidden;
