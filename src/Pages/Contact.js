@@ -61,7 +61,7 @@ export default class Contact extends React.Component {
       if (isValid) {
         console.log(this.state);
         // clear form
-        this.setState(initialState);
+       
       }
     };
 
@@ -126,7 +126,8 @@ export default class Contact extends React.Component {
                        animate={{ opacity: 1 }} 
                        exit={{ opacity: 0 }} 
                        transition={{delay: .2, ...transition}}
-                       onSubmit={this.handleSubmit}>
+                       //onSubmit={this.handleSubmit}
+                       >
         
          <input type='hidden' name='redirect_to' value='http://localhost:3000/thankyou' />                 
 

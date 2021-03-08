@@ -2,7 +2,7 @@ import React from 'react';
 import {motion} from 'framer-motion';
 
 import './About.css';
-import jade from '../Images/jade.jpg';
+import Me from '../Images/Me.png';
 
 const About = () => {
     const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9 ]};
@@ -16,12 +16,12 @@ const About = () => {
         <div className="About-page" >
 
             <div className="jade-container">
-            <motion.div className="jade" key={jade.src} src={jade.src} 
+            <motion.div className="jade" key={Me.src} src={Me.src} 
                                   initial={{ x: -300, opacity: 0}} 
                                   animate={{ x: 0, opacity: 1 }} 
                                   transition={{delay: .2, ...transition}}
                                   exit={{ x: -300, opacity: 0 }} 
-                                  style={{ backgroundImage: `url('${jade}')` }}> 
+                                  style={{ backgroundImage: `url('${Me}')` }}> 
             </motion.div>
 
             </div>

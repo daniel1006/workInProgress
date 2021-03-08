@@ -4,6 +4,8 @@ import DrawerToggle from '../SideDrawer/DrawerToggle';
 
 import './Toolbar.css';
 
+import Logo from '../ToolBar/Logo.png';
+
 // Short cut from using curly braces
 const toolbar = props => (
    
@@ -13,7 +15,7 @@ const toolbar = props => (
             <div className="toolbar-toggle-button">
                 <DrawerToggle click={props.drawerClickHandler} />
             </div>
-            <div className="Toolbar-logo"> <Link to="/"> D L </Link> </div>
+            <div className="Toolbar-logo"> <Link to="/"> <img src={Logo} title="Logo" /> </Link> </div>
             <div className="Spacer" ></div>
             <div className="Toolbar-nav-list">
                 <ul>

@@ -7,8 +7,6 @@ import './Home.css';
 import {FaLevelDownAlt, FaLongArrowAltLeft} from 'react-icons/fa';
 
 import Me from '../Images/Me.png';
-import security from '../Images/security.png';
-import design from '../Images/design.png';
 
 const Home = () => {
     const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9 ]};
@@ -92,7 +90,15 @@ const Home = () => {
                     <span className="iframe-text">An example of what i can do</span>
                     <div  className="iframe-link" > <FaLongArrowAltLeft style={{ fontSize:"1.5rem" }} /> visit </div> 
                     </div>
-                    <img className="security-image" src={security} alt="design" />
+
+                    <iframe className="security-image"  
+                    width="905" height="509" 
+                    src="https://www.youtube.com/embed/seY-M0i78F4" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                    </iframe>
+
              </div>
 
              <div className="iframe-square">
@@ -102,8 +108,15 @@ const Home = () => {
                     <span className="iframe-text">User authentication / kubernetes deployemnt</span>
                     <div className="iframe-link" > <FaLongArrowAltLeft style={{ fontSize:"1.5rem" }} /> visit </div>
                     </div>
-                    <img className="security-image" src={design}  alt="security link" />
-
+                    
+                    <iframe className="security-image"  
+                    width="905" height="509" 
+                    src="https://www.youtube.com/embed/seY-M0i78F4" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                    </iframe>
+                    
              </div>
 
              </div>
