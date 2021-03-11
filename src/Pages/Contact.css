@@ -129,6 +129,7 @@ input {
     border: none;
     border-radius: 15px;
     outline: none;
+    background-color: ghostwhite;
 }
 
 @media (max-width:650px) {
@@ -144,6 +145,7 @@ input {
     border-radius: 15px;
     outline: none;
     resize: none;
+    background-color: ghostwhite;
 }
 
 @media (max-width:650px) {
@@ -169,7 +171,7 @@ input {
     vertical-align: middle;
     overflow: hidden;
     transition: .3s;
-    background-color: white;
+    background-color: ghostwhite;
 }
 
 .send-btn:hover {

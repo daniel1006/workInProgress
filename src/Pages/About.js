@@ -85,7 +85,7 @@ const About = () => {
                     • Kubernetes cluster management <br/> 
                     • User Authentication/Authorization<br/> 
                     <br/> 
-                    These skills allow me to use a wide range of tools to create responsive styalized websites with client side fucntionality.
+                    
                     </motion.div>
                 </div>
             </div>

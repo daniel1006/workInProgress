@@ -79,7 +79,7 @@ const Home = () => {
             <div className="part2" >
             <hr style={{width:"80%", color:"#4c5a21", backgroundColor:"#4c5a21", borderColor:"#4c5a21"}} />
               <div className="portfolio" >
-                   <h1 className="portfolio-words" style={{paddingTop:"7%",position:"relative"}}> Welcome to my personal portfolio  </h1>
+                   <h1 className="portfolio-words" style={{paddingTop:"7%",position:"relative"}}> Welcome to my personal portfolio.  </h1>
                    <h2 className="portfolio-words" >here you'll find some of my past projects</h2>
               </div>
  
@@ -93,7 +93,7 @@ const Home = () => {
 
                     <iframe className="security-image"  
                     width="905" height="509" 
-                    src="https://www.youtube.com/embed/seY-M0i78F4" 
+                    src="https://awesome-hermann-a54778.netlify.app/" 
                     frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                     allowfullscreen>
@@ -111,7 +111,7 @@ const Home = () => {
                     
                     <iframe className="security-image"  
                     width="905" height="509" 
-                    src="https://www.youtube.com/embed/seY-M0i78F4" 
+                    src="https://hungry-saha-3228d6.netlify.app/" 
                     frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                     allowfullscreen>
