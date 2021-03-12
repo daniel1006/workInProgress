@@ -1,5 +1,7 @@
 import React from 'react';
 import {motion} from 'framer-motion';
+import useForm from '../components/useForm';
+import validateLogin from '../components/validateLogin';
 
 import {FaPhoneAlt} from 'react-icons/fa';
 import './Contact.css';
@@ -7,72 +9,22 @@ import '../components/Footer/Footer.css';
 
 import letter from '../Images/letter.png';
 
-const initialState = {
-   name: "",
-   email: "",
-   message: "",
-   nameError: "",
-   emailError: "",
-   messageError: ""
-};
+const Contact = () => {
+  const { handleChange, handleSubmit, values, errors } = useForm(submit, validateLogin);
 
-export default class Contact extends React.Component {
-  
-   state = initialState;
+  function submit() {
 
-   handleChange = event => {
-      const isCheckbox = event.target.type === "checkbox";
-      this.setState({
-        [event.target.name]: isCheckbox
-          ? event.target.checked
-          : event.target.value
-      });
-    };
-  
+  }
 
-    validate = () => {
-      let nameError = "";
-      let emailError = "";
-      let messageError = "";
-  
-      if (!this.state.name) {
-        nameError = "name cannot be blank";
+  const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9 ]};
+  const exit = {
+      exit: {
+      opacity: 0,
       }
+  };
 
-      if (!this.state.message) {
-         messageError = "message cannot be blank";
-       } 
-  
-      if (!this.state.email.includes("@")) {
-        emailError = "invalid email";
-      }
-  
-      if (emailError || nameError || messageError) {
-        this.setState({ emailError, nameError, messageError});
-        return false;
-      }
-  
-      return true;
-    };
-  
-    handleSubmit = event => {
-      event.preventDefault();
-      const isValid = this.validate();
-      if (isValid) {
-        console.log(this.state);
-        // clear form
-       
-      }
-    };
-
-   render() {
-    const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9 ]};
-    const exit = {
-        exit: {
-        opacity: 0,
-        }
-    };
     return(
+
         <div className="Contact-page">
 
          <div className="image-container" >
@@ -126,8 +78,7 @@ export default class Contact extends React.Component {
                        animate={{ opacity: 1 }} 
                        exit={{ opacity: 0 }} 
                        transition={{delay: .2, ...transition}}
-                       //onSubmit={this.handleSubmit}
-                       >
+                       onSubmit={handleSubmit} noValidate>
         
          <input type='hidden' name='redirect_to' value='http://localhost:3000/thankyou' />                 
 
@@ -135,35 +86,36 @@ export default class Contact extends React.Component {
           <group >
              <label>
                 <div style={{fontSize: "2rem"}} >Full Name </div>
-                <input className="full-name" name='name' type='text' value={this.state.name} onChange={this.handleChange} /> 
+                <input className="full-name" name="full" type="text" value={values.full} onChange={handleChange} /> 
+                     {errors.full && <p className="error">{errors.full}</p>}
              </label> 
           </group>
-          <div style={{color:"red"}}>{this.state.nameError}</div>
           </div>
           
           <div className="email-box" > 
           <group >
              <label>
                 <div style={{fontSize: "2rem"}} > Email </div> 
-                <input className="Email" type="email" name="email" value={this.state.email} onChange={this.handleChange} /> 
+                <input className="Email" name="email" type="email" value={values.email} onChange={handleChange} /> 
+                    {errors.email && <p className="error">{errors.email}</p>}
              </label>
           </group>
-          <div style={{color:"red"}}>{this.state.emailError}</div>
           </div>
           
           <div className="message-box" >
           <group >
              <label >
              <div style={{fontSize: "2rem"}} >  Message </div>
-                <textarea className="message-area" name="message" value={this.state.message} onChange={this.handleChange} /> 
+                <textarea className="message-area" name="password" type="password" value={values.password} onChange={handleChange} /> 
+                    {errors.password && <p className="error">{errors.password}</p>}
              </label> 
           </group>
-          <div style={{color:"red"}}>{this.state.messageError}</div>
           </div>
                 <button className="send-btn" type='submit' value='Test form' > <span className="btn-words" >Send</span> </button>
           </motion.form>
        
        </div>
     );
-    }
-}
+    };
+
+    export default Contact;
