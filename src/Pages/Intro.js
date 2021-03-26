@@ -4,7 +4,6 @@ import {motion} from 'framer-motion';
 import {FaLongArrowAltRight} from 'react-icons/fa';
 
 import Me from '../Images/Me.png';
-import forest from '../Images/forest.jpg';
 import './Intro.css';
 
 
@@ -36,15 +35,15 @@ const Intro = () => {
               </div>
 
               <div className="remark-box" >
-                   <motion.span initial={{ opacity: 0 }} 
+              <Link to="/home" style={{textDecoration: "none"}}> <motion.span initial={{ opacity: 0 }} 
                                 animate={{ opacity: 1 }} 
                                 exit={{ opacity: 0 }} 
                                 transition={{delay: .2, ...transition}} 
                                 className="remark"> Junior Web  
                                 <motion.span style={{ textDecoration: "underline solid darkOrange"}}> Developer</motion.span> 
-                                <FaLongArrowAltRight className="intro-icon" />           
-                    </motion.span>
-
+                                <FaLongArrowAltRight className="intro-icon" />         
+                    </motion.span></Link> 
+                
               </div>
         </div>
     )

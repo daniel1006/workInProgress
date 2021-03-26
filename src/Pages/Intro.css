@@ -116,6 +116,8 @@
 .remark {
     font-size: 3vw;
     font-weight: 200;
+    text-decoration: none;
+    color: #2B333D;
 }
 
 @media (max-width:850px) {
@@ -153,6 +155,9 @@
 .intro-icon {
     margin-left: 3%;
     margin-top: 15px;
+    text-decoration: none;
+    color: #2B333D;
+    
 }
 
 

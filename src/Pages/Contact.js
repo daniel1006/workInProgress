@@ -1,7 +1,5 @@
 import React from 'react';
 import {motion} from 'framer-motion';
-import useForm from '../components/useForm';
-import validateLogin from '../components/validateLogin';
 
 import {FaPhoneAlt} from 'react-icons/fa';
 import './Contact.css';
@@ -10,12 +8,7 @@ import '../components/Footer/Footer.css';
 import letter from '../Images/letter.png';
 
 const Contact = () => {
-  const { handleChange, handleSubmit, values, errors } = useForm(submit, validateLogin);
-
-  function submit() {
-
-  }
-
+  
   const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9 ]};
   const exit = {
       exit: {
@@ -77,17 +70,15 @@ const Contact = () => {
                        initial={{ opacity: 0 }} 
                        animate={{ opacity: 1 }} 
                        exit={{ opacity: 0 }} 
-                       transition={{delay: .2, ...transition}}
-                       onSubmit={handleSubmit} noValidate>
-        
-         <input type='hidden' name='redirect_to' value='http://localhost:3000/thankyou' />                 
+                       transition={{delay: .2, ...transition}}>
 
+           <input type='hidden' name='redirect_to' value='http://localhost:3000/thankyou' />           
+        
           <div className="name-box">
           <group >
              <label>
                 <div style={{fontSize: "2rem"}} >Full Name </div>
-                <input className="full-name" name="full" type="text" value={values.full} onChange={handleChange} /> 
-                     {errors.full && <p className="error">{errors.full}</p>}
+                <input className="full-name" name="full" type="text"/> 
              </label> 
           </group>
           </div>
@@ -96,8 +87,7 @@ const Contact = () => {
           <group >
              <label>
                 <div style={{fontSize: "2rem"}} > Email </div> 
-                <input className="Email" name="email" type="email" value={values.email} onChange={handleChange} /> 
-                    {errors.email && <p className="error">{errors.email}</p>}
+                <input className="Email" name="email" type="email" /> 
              </label>
           </group>
           </div>
@@ -106,12 +96,12 @@ const Contact = () => {
           <group >
              <label >
              <div style={{fontSize: "2rem"}} >  Message </div>
-                <textarea className="message-area" name="password" type="password" value={values.password} onChange={handleChange} /> 
-                    {errors.password && <p className="error">{errors.password}</p>}
+                <textarea className="message-area" name="message" type="text" /> 
              </label> 
           </group>
           </div>
                 <button className="send-btn" type='submit' value='Test form' > <span className="btn-words" >Send</span> </button>
+                
           </motion.form>
        
        </div>
