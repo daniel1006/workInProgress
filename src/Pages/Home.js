@@ -88,15 +88,17 @@ const Home = () => {
                     <div className="iframe-info" >
                     <h3  className="first-iframe-header">Website design</h3>
                     <span className="iframe-text">An example of what i can do</span>
-                    <div  className="iframe-link" > <FaLongArrowAltLeft style={{ fontSize:"1.5rem" }} /> visit </div> 
-                    </div>
+
+                   <a target="_blank" href="https://awesome-hermann-a54778.netlify.app" style={{textDecoration:"none", color:"#ffa812"}}>
+                       <div  className="iframe-link" > <FaLongArrowAltLeft style={{ fontSize:"1.5rem" }} /> visit </div> 
+                    </a> 
+            </div>
 
                     <iframe className="security-image"  
                     width="905" height="509" 
                     src="https://awesome-hermann-a54778.netlify.app/" 
                     frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" >
                     </iframe>
 
              </div>
@@ -106,7 +108,9 @@ const Home = () => {
                     <div className="iframe-info" >
                     <h3 className="second-iframe-header">web security</h3>
                     <span className="iframe-text">User authentication / kubernetes deployemnt</span>
-                    <div className="iframe-link" > <FaLongArrowAltLeft style={{ fontSize:"1.5rem" }} /> visit </div>
+                    <a target="_blank" href="https://hungry-saha-3228d6.netlify.app" style={{textDecoration:"none", color:"#ffa812"}}>
+                        <div className="iframe-link" > <FaLongArrowAltLeft style={{ fontSize:"1.5rem" }} /> visit </div>
+                    </a>
                     </div>
                     
                     <iframe className="security-image"  
