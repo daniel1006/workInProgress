@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Route, BrowserRouter as Router, Switch} from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
+import { Helmet } from "react-helmet";
 
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import Toolbar from './components/ToolBar/Toolbar';
@@ -47,6 +48,13 @@ class App extends Component {
     <main>
 
    <div className="background" >
+
+     <Helmet>
+       <title>Lanthier Web Design</title>
+       <meta name="description"
+             content="This is my personal portfolio where you can take a look at my past React projects, download my CV, and get into contact with me"
+             />
+     </Helmet>
   
     <Router>
     
