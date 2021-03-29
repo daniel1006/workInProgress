@@ -151,6 +151,10 @@
         }
 }
 
+.dev-word {
+    text-decoration: underline solid darkorange;
+}
+
 /* react arrow icon */
 .intro-icon {
     margin-left: 3%;

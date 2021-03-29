@@ -40,7 +40,7 @@ const Intro = () => {
                                 exit={{ opacity: 0 }} 
                                 transition={{delay: .2, ...transition}} 
                                 className="remark"> Junior Web  
-                                <motion.span style={{ textDecoration: "underline solid darkOrange"}}> Developer</motion.span> 
+                                <motion.span  clasname="dev-word"> Developer</motion.span> 
                                 <FaLongArrowAltRight className="intro-icon" />         
                     </motion.span></Link> 
                 
