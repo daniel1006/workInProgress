@@ -23,9 +23,9 @@ const Footer = () => {
             <Link to="/contact" className="footer-button"> contact me <FaRegEnvelope className="envelope"/> </Link>
 
             <span className="footer-links"> 
-              <a className="btn"> <FaLinkedin className="fa linkdin"/> </a> 
-              <a className="btn"> <FaGithub className="fa github"/> </a>
-              <a className="btn"> <FaInstagram className="fa instagram"/> </a>
+              <a href="https://www.linkedin.com/in/daniel-lanthier-53743820a/" target="_blank" className="btn"> <FaLinkedin className="fa linkdin"/> </a> 
+              <a href="https://github.com/daniel1006" target="_blank" className="btn"> <FaGithub className="fa github"/> </a>
+              <a href="https://www.instagram.com/daniel.lth/" target="_blank" className="btn"> <FaInstagram className="fa instagram"/> </a>
               
               <a className="btn cv-button" download href="/Resume/CV.pdf">
               <p className="fa cv-words" > Download CV </p> </a> 

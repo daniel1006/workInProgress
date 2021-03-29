@@ -160,6 +160,14 @@
     
 }
 
+@media (max-width:675px) {
+    .intro-icon {    
+        transform: rotate(90deg);
+        display: flex;
+        justify-content: center;
+        margin-left: 25%;
+    }
+}
 
 
 

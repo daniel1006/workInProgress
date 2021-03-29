@@ -33,7 +33,7 @@ class App extends Component {
    backdropClickHandler = () => {
      this.setState({sideDrawerOpen: false})
    };
-   
+ 
    // if sideDrawer is true the then the extra hamburger menu will be seen.
    render() {
      let sideDrawer;
@@ -67,9 +67,9 @@ class App extends Component {
         <Switch location={location} key={location.pathname} >
         
          <Route path="/" exact component={Intro}> <Intro /> </Route>   
-         <Route path="/home" component={Home}> <Home /> <Footer /> <Toolbar drawerClickHandler={this.drawerToggleClickHandler} /> <SideDrawer show={this.state.sideDrawerOpen} /> </Route>
-         <Route path="/about" component={About}> <About /> <Footer /> <Toolbar drawerClickHandler={this.drawerToggleClickHandler} /> <SideDrawer show={this.state.sideDrawerOpen} /> </Route>
-         <Route path="/contact" component={Contact} > <Contact /> <Toolbar drawerClickHandler={this.drawerToggleClickHandler} /> <SideDrawer show={this.state.sideDrawerOpen} /> </Route>
+         <Route path="/home" component={Home}> <Home /> <Footer /> <Toolbar drawerClickHandler={this.drawerToggleClickHandler} /> <SideDrawer show={this.state.sideDrawerOpen} drawerClickHandler={this.drawerToggleClickHandler}/></Route>
+         <Route path="/about" component={About}> <About /> <Footer /> <Toolbar drawerClickHandler={this.drawerToggleClickHandler} /> <SideDrawer show={this.state.sideDrawerOpen} drawerClickHandler={this.drawerToggleClickHandler}/> </Route>
+         <Route path="/contact" component={Contact} > <Contact /> <Toolbar drawerClickHandler={this.drawerToggleClickHandler} /> <SideDrawer show={this.state.sideDrawerOpen} drawerClickHandler={this.drawerToggleClickHandler}/> </Route>
          <Route path="/thankyou" component={ThankYou} > <ThankYou /> </Route>
          
        </Switch>

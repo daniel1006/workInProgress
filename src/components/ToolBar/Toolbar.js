@@ -6,9 +6,10 @@ import './Toolbar.css';
 
 import Logo from '../ToolBar/Logo.png';
 
+
 // Short cut from using curly braces
 const toolbar = props => (
-   
+
 
     <header className="Toolbar">
         <nav className="Toolbar-Nav">
