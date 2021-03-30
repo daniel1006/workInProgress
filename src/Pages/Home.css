@@ -100,14 +100,13 @@
 
 .iframe-square {
     width: 41%;
-    height: 30%;
+    height: 35%;
     margin-left: 40%;
     margin-top: 6%;
     margin-bottom: 8%;
     color: #ffa812;
     background-color: #a40606;
     background-image: linear-gradient(315deg, #a40606 0%, #d98324 74%);
- 
     text-align: center;
     background-position: center;
     background-repeat: no-repeat;
@@ -118,9 +117,10 @@
 .security-image{
     position: absolute;
     width: 30vw;
-    height: 30vh;
+    height: 35vh;
     left: -45%;
     top: 20%;
+    pointer-events: none;
 }
 
 @media (max-width: 700px) {

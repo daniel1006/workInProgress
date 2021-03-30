@@ -83,8 +83,8 @@ const Home = () => {
                    <h2 className="portfolio-words" >here you'll find some of my past projects</h2>
               </div>
  
+              
               <div className="iframe-square">
-                    
                     <div className="iframe-info" >
                     <h3  className="first-iframe-header">Website design</h3>
                     <span className="iframe-text">An example of what i can do</span>
@@ -93,15 +93,15 @@ const Home = () => {
                        <div  className="iframe-link" > <FaLongArrowAltLeft style={{ fontSize:"1.5rem" }} /> visit </div> 
                     </a> 
             </div>
-
                     <iframe className="security-image"  
                     width="905" height="509" 
                     src="https://awesome-hermann-a54778.netlify.app/" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" >
+                    scrolling="no"
+                    frameborder="0"e>
+                        <a target="_blank" href="https://awesome-hermann-a54778.netlify.app"></a>
                     </iframe>
-
              </div>
+             
 
              <div className="iframe-square">
 
@@ -116,9 +116,8 @@ const Home = () => {
                     <iframe className="security-image"  
                     width="905" height="509" 
                     src="https://hungry-saha-3228d6.netlify.app/" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
+                    scrolling="no"
+                    frameborder="0">
                     </iframe>
                     
              </div>
