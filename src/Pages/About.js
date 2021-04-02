@@ -54,9 +54,9 @@ const About = () => {
                      animate={{ opacity: 1 }} 
                      exit={{ opacity: 0 }} 
                      transition={{delay: .2, ...transition}}
-                     > My name is Daniel Lanthier, and I am a Canadian citizen who moved to Sweden early last fall. 
-                     During my time here I have begun to integrate myself into Swedish culture and have spent a large amount of effort learning how to code.  
-                     With an interest in the field and a passion for UI, I am now self-taught in HTML, CSS, JavaScript, React, Docker deployment, and Kubernetes cluster management.  <br /> <br/> 
+                     >  <p>My name is Daniel Lanthier, and I am a Canadian citizen who is currently based in Sweden.
+                          With an interest in the field and a passion for UI, I am now self-taught in HTML, CSS, 
+                          JavaScript, React, Docker deployment, and Kubernetes cluster management.  <br /> <br/> </p>
                        
 
                      </motion.div>
