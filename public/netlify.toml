@@ -1,0 +1,15 @@
+[[redirects]]
+  from = "/contact"
+  to = "/thankyou"
+  status = 301
+  force = false
+  query = {path = ":path"} #  apply this rule for /old-path?path=example
+  conditions = {Language = ["en","es"], Country = ["US"]}
+
+  [[redirects]]
+  from = "/thankyou"
+  to = "/home"
+  status = 301
+  force = false
+  query = {path = ":path"} #  apply this rule for /old-path?path=example
+  conditions = {Language = ["en","es"], Country = ["US"]}
