@@ -2,112 +2,74 @@
     min-height: 280vh;
 }
 
-/* Picture */
-.jade {
-    height: 100vh;
-    overflow: hidden;
-    background-position: center right;
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: -1;
-}
-
 /* Headers */
 .header1{
     color: #2B333D;
-    position: absolute;
-    top: 27%;
-    left: 13%;
-    font-size: 4.5rem;
+    padding-top: 25vh;
+    margin-top: 0;
+    text-align: center;
+    font-size: 6rem;
 }
 
 @media (max-width:1024px) {
     .header1 {    
-      font-size: 3.5rem;
-      left: 9%;
+      font-size: 5rem;
     }
 }
 
 @media (max-width:768px) {
     .header1 {    
-      font-size: 2.5rem;
-      left: 7%;
-      top: 31%;
+      font-size: 4rem;
     }
 }
 
 @media (max-width:500px) {
     .header1 {    
-      font-size: 2rem;
-      left: 5%;
-      top: 26%;
+      font-size: 3rem;
     }
 }
 
 @media (max-width:385px) {
     .header1 {    
-      font-size: 1.5rem;
-      left: 5%;
-      top: 33%;
+      font-size: 2rem;
     }
 }
 
 .header2{
     color: #2B333D;
-    position: absolute;
-    top: 58%;
-    left: 2.6%;
-    font-size: 2.5rem;
-    text-decoration: underline darkorange;
+    text-align: center;
+    font-size: 4rem;
+    text-decoration: 9px underline darkorange;
 }
 
 @media (max-width:1440px) {
     .header2 {    
-      font-size: 2rem;
-      top: 55%;
-      left: 4%;
+      font-size: 3rem;
     }
 }
 
 @media (max-width:1125px) {
     .header2 {    
-      font-size: 1.5rem;
-      top: 52%;
-      left: 4%;
-    }
-}
-
-@media (max-width:1024px) {
-    .header2 {    
-      top: 45%;
+      font-size: 2rem;
     }
 }
 
 @media (max-width:720px) {
     .header2 {    
-      font-size: 1.2rem;
+      font-size: 2rem;
     }
 }
 
 @media (max-width:554px) {
     .header2 {    
-      font-size: 1rem;
+      font-size: 1.5rem;
       top: 40%;
-    }
-}
-
-@media (max-width: 444px) {
-    .header2 {    
-      font-size: 1rem;
-      top: 35%;
     }
 }
 
 @media (max-width: 395px) {
     .header2 {    
-      font-size: 0.8rem;
-      top: 40%;
-      left: 2%;
+      font-size: 1.2rem;
     }
 }
 

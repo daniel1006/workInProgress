@@ -68,7 +68,7 @@ const Contact = () => {
             <span>L</span>
             <span>e</span>
             <span style={{color:"orange"}}>t</span>
-            <span>s </span>
+            <span>'s </span>
             <span>t</span>
             <span>a</span>
             <span style={{color:"orange"}}>l</span>

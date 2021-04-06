@@ -14,18 +14,7 @@ const About = () => {
 
     return(
         <div className="About-page" >
-
-            <div className="jade-container">
-            <motion.div className="jade" key={Me.src} src={Me.src} 
-                                  initial={{ x: -300, opacity: 0}} 
-                                  animate={{ x: 0, opacity: 1 }} 
-                                  transition={{delay: .2, ...transition}}
-                                  exit={{ x: -300, opacity: 0 }} 
-                                  style={{ backgroundImage: `url('${Me}')` }}> 
-            </motion.div>
-
-            </div>
-
+            
             <motion.h1 className="header1"
                        initial={{ opacity: 0 }} 
                        animate={{ opacity: 1 }} 
