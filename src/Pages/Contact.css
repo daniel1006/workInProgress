@@ -84,7 +84,6 @@
 .form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
     margin-left: 40%;
@@ -154,6 +153,11 @@ input {
     }
 }
 
+.email-box{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 /* send button */
 .send-btn {
     display: inline-block;
@@ -195,6 +199,6 @@ input {
     }
 }
 
-.error {
+div[role='alert'] {
   color: red;
 }

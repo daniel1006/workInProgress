@@ -18,7 +18,7 @@ const Footer = () => {
         <footer style={{ backgroundImage: `url('${lamps}')` }} className="footer">
             <span className="footer-work">Work With Me</span>
 
-            <span className="footer-colab">wannt to colab? i'm looking for new projects</span>
+            <span className="footer-colab">want to colab? i'm looking for new projects</span>
 
             <Link to="/contact" className="footer-button"> contact me <FaRegEnvelope className="envelope"/> </Link>
 

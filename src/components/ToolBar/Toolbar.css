@@ -17,6 +17,7 @@
 /* space between hamburger and logo */
 .Toolbar-logo {
     margin-left: 1rem;
+    margin-top: 4rem;
 }
 
 .Toolbar-logo a {

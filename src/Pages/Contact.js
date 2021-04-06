@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Redirect, withRouter } from 'react-router-dom';
 import {motion} from 'framer-motion';
+import { useForm } from 'react-hook-form';
 
 import {FaPhoneAlt} from 'react-icons/fa';
 import './Contact.css';
@@ -7,7 +9,17 @@ import '../components/Footer/Footer.css';
 
 import letter from '../Images/letter.png';
 
+import { init, sendForm } from 'emailjs-com';
+init("user_ATLikbsUbE9p1oF2JazwA");
+
 const Contact = () => {
+
+  const [contactNumber, setContactNumber] = useState("000000");
+  
+  const generateContactNumber = () => {
+  const numStr = "000000" + (Math.random() * 1000000 | 0);
+    setContactNumber(numStr.substring(numStr.length - 6));
+  }
   
   const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9 ]};
   const exit = {
@@ -15,6 +27,22 @@ const Contact = () => {
       opacity: 0,
       }
   };
+
+  const { register, watch, formState: { errors }, handleSubmit } = useForm();
+
+  const onSubmit = (data) =>  {
+  generateContactNumber();
+  sendForm('default_service', 'template_sorw188', '#contact-form')
+  .then(function(response) {
+   document.location = "/thankyou"
+    console.log('SUCCESS!', response.status, response.text);
+  }, function(error) {
+    console.log('FAILED...', error);
+  });
+}
+
+  const message = watch('message') || "";
+  const messageCharsLeft = 1500 - message.length; 
 
     return(
 
@@ -64,21 +92,23 @@ const Contact = () => {
 
           </motion.span>
 
-          <motion.form action="https://getsimpleform.com/messages?form_api_token=b8b608e5b1e421e47f3b0d996f5e2453" 
-                       method="post" 
+          <motion.form id='contact-form'
                        className="form" 
                        initial={{ opacity: 0 }} 
                        animate={{ opacity: 1 }} 
                        exit={{ opacity: 0 }} 
-                       transition={{delay: .2, ...transition}}>
-
-           <input type='hidden' name='redirect_to' value='https://lanthierwebdesign.com/thankyou' />           
+                       transition={{delay: .2, ...transition}}
+                       onSubmit={handleSubmit(onSubmit)}>         
         
           <div className="name-box">
           <group >
-             <label>
-                <div style={{fontSize: "2rem"}} >Full Name </div>
-                <input className="full-name" name="full" type="text"/> 
+             <label> 
+                <input className="full-name"
+                       type='text' 
+                       name='user_name' 
+                       placeholder='Name'
+                       {...register('user_name', { required: true, maxLength:20})}/> 
+                      <div role="alert">{errors.user_name && "Name is required"}</div> 
              </label> 
           </group>
           </div>
@@ -86,8 +116,11 @@ const Contact = () => {
           <div className="email-box" > 
           <group >
              <label>
-                <div style={{fontSize: "2rem"}} > Email </div> 
-                <input className="Email" name="email" type="email" /> 
+                <input className="Email" 
+                       type='email' 
+                       name='user_email' 
+                       placeholder='Email' {...register('user_email', { required: true, pattern: /^\S+@\S+\.\S+$/ })}/> 
+                       <div role="alert">{errors.user_email && "Email is not valid"}</div> 
              </label>
           </group>
           </div>
@@ -95,14 +128,20 @@ const Contact = () => {
           <div className="message-box" >
           <group >
              <label >
-             <div style={{fontSize: "2rem"}} >  Message </div>
-                <textarea className="message-area" name="message" type="text" /> 
+                <textarea className="message-area" 
+                          name='message' 
+                          placeholder='Message' 
+                          {...register('message', { required: true, maxLength:1500})}/> 
+                          <p className='message-chars-left'>{messageCharsLeft}</p>
+                          <div role="alert">{errors.message && "Must enter a message"}</div> 
              </label> 
           </group>
           </div>
-                <button className="send-btn" type='submit' value='Test form' > <span className="btn-words" >Send</span> </button>
+
+               
+                <input className="send-btn" type='submit' value='Send' />
                 
-          </motion.form>
+               </motion.form>
        
        </div>
     );
