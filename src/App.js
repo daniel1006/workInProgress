@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Route, BrowserRouter as Router, Switch} from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
+import { Helmet } from "react-helmet";
 
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import Toolbar from './components/ToolBar/Toolbar';
